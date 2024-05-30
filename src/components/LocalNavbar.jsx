@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 function LocalNavbar() {
     return (
         <Navbar>
-            <Container className="flex bg-slate-800 p-3 rounded-lg">
+            <Container className="flex bg-slate-200 dark:bg-slate-800 p-3 rounded-lg">
                 <Navbar.Brand className="font-bold" href="/">Joshua Ostblom</Navbar.Brand>
                 <Nav>
                     <Nav.Link className="px-2" href="/">Home</Nav.Link>
