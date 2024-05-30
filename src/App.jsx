@@ -1,11 +1,11 @@
 import './App.css'
-import { Navbar } from 'react-bootstrap'
 import { Outlet } from 'react-router-dom'
+import LocalNavbar from './components/LocalNavbar'
 
 function App() {
   return (
     <>
-      <Navbar />
+      <LocalNavbar />
       <Outlet />
     </>
   )
