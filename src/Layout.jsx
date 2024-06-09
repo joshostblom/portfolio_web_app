@@ -1,5 +1,5 @@
-import { Outlet } from 'react-router-dom'
-import LocalNavbar from './components/LocalNavbar'
+import { Outlet } from "react-router-dom";
+import LocalNavbar from "./components/LocalNavbar";
 
 function Layout(props) {
   return (
@@ -7,7 +7,7 @@ function Layout(props) {
       <LocalNavbar darkMode={props.darkMode} setDarkMode={props.setDarkMode} />
       <Outlet />
     </div>
-  )
+  );
 }
 
-export default Layout
+export default Layout;
