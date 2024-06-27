@@ -1,5 +1,58 @@
+import { useEffect } from "react";
+import { useState } from "react";
+
 function Projects() {
-  return <div>Projects</div>;
+  const [projects, setProjects] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      setIsLoading(true);
+      try {
+        const response = await fetch("http://localhost:8080/project/get");
+        const result = await response.json();
+        setProjects(result);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  return (
+    <div>
+      <h1 className="flex justify-center m-10 font-bold text-5xl">Projects</h1>
+
+      <ul>
+        {projects &&
+          projects.map((project) => (
+            <li>
+              <div className="flex items-center bg-slate-200 dark:bg-slate-800 rounded-xl p-5 m-5">
+                <img src={project.image} className="pr-5" />
+                <div className="flex flex-col">
+                  <a href={project.link} target="_blank" className="text-xl">
+                    {project.title}
+                  </a>
+                  <div>{project.description}</div>
+                </div>
+              </div>
+            </li>
+          ))}
+      </ul>
+    </div>
+  );
 }
 
 export default Projects;
