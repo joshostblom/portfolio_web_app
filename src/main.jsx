@@ -6,6 +6,7 @@ import Projects from "./pages/Projects.jsx";
 import Resume from "./pages/Resume.jsx";
 import Layout from "./Layout.jsx";
 import Home from "./pages/Home.jsx";
+import Admin from "./pages/Admin.jsx";
 
 function App() {
   // Control dark mode
@@ -42,6 +43,10 @@ function App() {
         {
           path: "projects",
           element: <Projects />,
+        },
+        {
+          path: "admin",
+          element: <Admin />,
         },
       ],
     },
