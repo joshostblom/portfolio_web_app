@@ -2,8 +2,38 @@ import { useState } from "react";
 
 function Admin() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+
+  const login = async () => {
+    setIsLoading(true);
+    try {
+      const response = await fetch("http://localhost:8080/admin/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user: user,
+          password: password,
+        }),
+      });
+      const result = await response.json();
+
+      if (result.loginSuccessful) {
+        document.cookie = `token=${result.token}; path=/; secure; httponly; samesite=strict`;
+        setIsLoggedIn(result.loginSuccessful);
+      } else {
+        setError("Invalid credentials");
+      }
+    } catch (error) {
+      setError(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     !isLoggedIn && (
@@ -26,9 +56,13 @@ function Admin() {
             setPassword(e.target.value);
           }}
         />
-        <button className="flex items-center shadow-sm bg-slate-200 dark:bg-slate-800 rounded-full px-10 py-1 m-5">
-          Log In
+        <button
+          className="flex items-center shadow-sm bg-slate-200 dark:bg-slate-800 rounded-full px-10 py-1 m-5"
+          onClick={login}
+        >
+          {isLoading ? "Is Loading" : "Log In"}
         </button>
+        {error && <div className="text-red-600">{error}</div>}
       </div>
     )
   );
