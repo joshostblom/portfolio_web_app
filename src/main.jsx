@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Projects from "./pages/Projects.jsx";
-import Resume from "./pages/Resume.jsx";
 import Layout from "./Layout.jsx";
-import Home from "./pages/Home.jsx";
 import Admin from "./pages/Admin.jsx";
 
 function App() {
@@ -31,30 +28,16 @@ function App() {
     {
       path: "/",
       element: <Layout darkMode={darkMode} setDarkMode={setDarkMode} />,
-      children: [
-        {
-          path: "",
-          element: <Home />,
-        },
-        {
-          path: "resume",
-          element: <Resume />,
-        },
-        {
-          path: "projects",
-          element: <Projects />,
-        },
-        {
-          path: "admin",
-          element: <Admin />,
-        },
-      ],
+    },
+    {
+      path: "/admin",
+      element: <Admin />,
     },
   ]);
 
   return (
     <React.StrictMode>
-      <RouterProvider router={router} />
+      <RouterProvider router={router}></RouterProvider>
     </React.StrictMode>
   );
 }

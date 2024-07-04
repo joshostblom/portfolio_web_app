@@ -1,4 +1,5 @@
 import { BsFillMoonStarsFill, BsSunFill } from "react-icons/bs";
+import { Link } from "react-scroll";
 
 function LocalNavbar(props) {
   return (
@@ -6,21 +7,20 @@ function LocalNavbar(props) {
       <h1 className="font-bold text-nowrap">Joshua Ostblom</h1>
       <nav className="flex w-full">
         <ul className="flex items-center ml-2">
-          <li>
-            <a className="px-2" href="/">
-              Home
-            </a>
-          </li>
-          <li>
-            <a className="px-2" href="/resume">
-              Resume
-            </a>
-          </li>
-          <li>
-            <a className="px-2" href="/projects">
-              Projects
-            </a>
-          </li>
+          {props.links.map((link) => (
+            <li key={link.name}>
+              <Link
+                className="px-2"
+                to={link.name.toLowerCase()}
+                spy={true}
+                smooth={true}
+                offset={link.offset}
+                duration={500}
+              >
+                {link.displayName}
+              </Link>
+            </li>
+          ))}
         </ul>
         <ul className="flex items-center ml-auto">
           <li>

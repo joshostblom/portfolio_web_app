@@ -3,7 +3,7 @@ import me from "../assets/me.jpg";
 import { TbBrandKotlin } from "react-icons/tb";
 import { SiJetpackcompose } from "react-icons/si";
 
-function Home() {
+function About() {
   return (
     <div className="m-5">
       <div className="flex justify-center items-center my-10">
@@ -63,4 +63,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default About;
