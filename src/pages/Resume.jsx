@@ -1,5 +1,7 @@
 import { Document, Page, pdfjs } from "react-pdf";
 import { RiFileDownloadLine } from "react-icons/ri";
+import api from "../data/API";
+import { useEffect, useState } from "react";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
@@ -7,41 +9,48 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 function Resume() {
-  const downloadResume = () => {
-    const url = "http://localhost:8080/resources/get/resume";
+  const [resumeUrl, setResumeUrl] = useState(null);
 
-    fetch(url)
-      .then((response) => response.blob())
-      .then((blob) => {
-        const fileURL = window.URL.createObjectURL(blob);
+  useEffect(() => {
+    const getResume = async () => {
+      await api
+        .get("resources/get/resume", {
+          responseType: "blob",
+        })
+        .then((response) => {
+          const fileURL = window.URL.createObjectURL(new Blob([response.data]));
+          setResumeUrl(fileURL);
+        })
+        .catch((error) => console.error("Download failed:", error));
+    };
 
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "Joshua_Ostblom_Resume.pdf";
-        alink.click();
-      })
-      .catch((error) => console.error("Download failed:", error));
-  };
+    getResume();
+  }, []);
 
   return (
-    <div className="flex flex-col items-center">
-      <button
-        onClick={downloadResume}
-        className="flex items-center w-auto shadow-sm bg-slate-200 dark:bg-slate-800 rounded-full py-3 px-10 m-5"
-      >
-        Click to download
-        <RiFileDownloadLine className="pl-2 size-7" />
-      </button>
+    <div>
+      {resumeUrl && (
+        <div className="flex flex-col items-center">
+          <a
+            href={resumeUrl}
+            className="flex items-center w-auto shadow-sm bg-slate-200 dark:bg-slate-800 rounded-full py-3 px-10 m-5"
+            download="Joshua_Ostblom_Resume.pdf"
+          >
+            Click to download
+            <RiFileDownloadLine className="pl-2 size-7" />
+          </a>
 
-      <Document file="http://localhost:8080/resources/get/resume">
-        <Page
-          className="shadow-xl"
-          height={850}
-          pageNumber={1}
-          renderAnnotationLayer={false}
-          renderTextLayer={false}
-        />
-      </Document>
+          <Document file={resumeUrl}>
+            <Page
+              className="shadow-xl"
+              height={850}
+              pageNumber={1}
+              renderAnnotationLayer={false}
+              renderTextLayer={false}
+            />
+          </Document>
+        </div>
+      )}
     </div>
   );
 }

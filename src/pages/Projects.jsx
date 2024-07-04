@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import api from "../data/API";
 
 function Projects() {
   const [projects, setProjects] = useState(null);
@@ -10,9 +11,8 @@ function Projects() {
     const fetchProjects = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch("http://localhost:8080/project/get");
-        const result = await response.json();
-        setProjects(result);
+        const response = await api.get("project/get");
+        setProjects(response.data);
       } catch (error) {
         setError(error);
       } finally {
