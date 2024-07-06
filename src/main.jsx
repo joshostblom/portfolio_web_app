@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Layout from "./Layout.jsx";
 import Admin from "./pages/Admin.jsx";
+import { AuthProvider } from "./context/AuthProvider.jsx";
 
 function App() {
   // Control dark mode
@@ -31,7 +32,11 @@ function App() {
     },
     {
       path: "/admin",
-      element: <Admin />,
+      element: (
+        <AuthProvider>
+          <Admin />
+        </AuthProvider>
+      ),
     },
   ]);
 

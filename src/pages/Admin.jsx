@@ -22,9 +22,9 @@ function Admin() {
         }
       );
       if (response?.data?.loginSuccessful) {
-        const accessToken = response?.data?.accessToken;
+        const accessToken = response?.data?.token;
         setAuth({ user, password, accessToken });
-        setIsLoggedIn(result.loginSuccessful);
+        setIsLoggedIn(true);
       } else {
         setError("Invalid credentials");
       }

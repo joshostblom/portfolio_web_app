@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import api from "../data/API";
+import api from "../api/api";
 
 function Projects() {
   const [projects, setProjects] = useState(null);
