@@ -1,6 +1,9 @@
 import { useState } from "react";
+import useAuth from "../hooks/useAuth";
+import api from "../api/api";
 
 function Admin() {
+  const { setAuth } = useAuth();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -10,20 +13,17 @@ function Admin() {
   const login = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("http://localhost:8080/admin/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          user: user,
-          password: password,
-        }),
-      });
-      const result = await response.json();
-
-      if (result.loginSuccessful) {
-        document.cookie = `token=${result.token}; path=/; secure; httponly; samesite=strict`;
+      const response = await api.post(
+        "http://localhost:8080/admin/login",
+        JSON.stringify({ user, password }),
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true,
+        }
+      );
+      if (response?.data?.loginSuccessful) {
+        const accessToken = response?.data?.accessToken;
+        setAuth({ user, password, accessToken });
         setIsLoggedIn(result.loginSuccessful);
       } else {
         setError("Invalid credentials");

@@ -1,6 +1,6 @@
 import { Document, Page, pdfjs } from "react-pdf";
 import { RiFileDownloadLine } from "react-icons/ri";
-import api from "../data/API";
+import api from "../api/api";
 import { useEffect, useState } from "react";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -43,7 +43,7 @@ function Resume() {
           <Document file={resumeUrl}>
             <Page
               className="shadow-xl"
-              height={850}
+              height={1000}
               pageNumber={1}
               renderAnnotationLayer={false}
               renderTextLayer={false}
