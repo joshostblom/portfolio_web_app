@@ -2,7 +2,7 @@ import { useState } from "react";
 import useAuth from "../hooks/useAuth";
 import api from "../api/api";
 
-function Admin() {
+function AdminLogin() {
   const { setAuth } = useAuth();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -14,7 +14,7 @@ function Admin() {
     setIsLoading(true);
     try {
       const response = await api.post(
-        "http://localhost:8080/admin/login",
+        "admin/login",
         JSON.stringify({ user, password }),
         {
           headers: { "Content-Type": "application/json" },
@@ -49,7 +49,7 @@ function Admin() {
         />
         <input
           className="flex items-center bg-transparent p-2 m-1 border-b"
-          type="text"
+          type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => {
@@ -68,4 +68,4 @@ function Admin() {
   );
 }
 
-export default Admin;
+export default AdminLogin;

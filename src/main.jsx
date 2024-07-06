@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Layout from "./Layout.jsx";
-import Admin from "./pages/Admin.jsx";
+import AdminLogin from "./pages/AdminLogin.jsx";
 import { AuthProvider } from "./context/AuthProvider.jsx";
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
       path: "/admin",
       element: (
         <AuthProvider>
-          <Admin />
+          <AdminLogin />
         </AuthProvider>
       ),
     },
