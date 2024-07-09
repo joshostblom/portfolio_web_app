@@ -1,7 +1,7 @@
 import LocalNavbar from "./components/LocalNavbar";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import Resume from "./pages/Resume";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Resume from "./components/Resume";
 import { Element } from "react-scroll";
 
 function Layout(props) {

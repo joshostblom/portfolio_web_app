@@ -1,6 +1,6 @@
 import { Document, Page, pdfjs } from "react-pdf";
 import { RiFileDownloadLine } from "react-icons/ri";
-import api from "../api/api";
+import { api } from "../api/api";
 import { useEffect, useState } from "react";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
