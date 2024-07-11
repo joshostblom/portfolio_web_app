@@ -40,7 +40,10 @@ function Projects() {
           projects.map((project) => (
             <li>
               <div className="flex items-center bg-slate-200 dark:bg-slate-800 rounded-xl p-5 m-5">
-                <img src={project.image} className="pr-5" />
+                <img
+                  src={project.image}
+                  className="mr-5 w-60 h-60 object-cover object-center rounded-xl"
+                />
                 <div className="flex flex-col">
                   <a href={project.link} target="_blank" className="text-xl">
                     {project.title}

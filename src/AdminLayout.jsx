@@ -5,7 +5,7 @@ import useAuth from "./hooks/useAuth";
 function AdminLayout() {
   const { auth } = useAuth();
 
-  return auth?.isLoggedIn ? (
+  return auth?.user ? (
     <div>
       <AdminProjects />
     </div>

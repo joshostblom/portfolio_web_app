@@ -20,9 +20,8 @@ function AdminLogin() {
           withCredentials: true,
         }
       );
-      if (response?.data?.loginSuccessful) {
-        const accessToken = response?.data?.token;
-        setAuth({ user, password, accessToken });
+      if (response?.data?.user) {
+        setAuth(response?.data);
       } else {
         setError("Invalid credentials");
       }
