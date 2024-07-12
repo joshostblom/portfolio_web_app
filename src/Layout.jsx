@@ -3,6 +3,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 import { Element } from "react-scroll";
+import Skills from "./components/Skills";
 
 function Layout(props) {
   return (
@@ -23,7 +24,10 @@ function Layout(props) {
           <About />
         </Element>
         <Element name="resume">
-          <Resume />
+          <div className="flex items-start w-full justify-center gap-10">
+            <Resume />
+            <Skills />
+          </div>
         </Element>
         <Element name="projects">
           <Projects />

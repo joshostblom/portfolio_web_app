@@ -1,6 +1,6 @@
-import AdminLogin from "./components/AdminLogin";
-import AdminProjects from "./components/AdminProjects";
-import useAuth from "./hooks/useAuth";
+import AdminLogin from "./AdminLogin";
+import AdminProjects from "./AdminProjects";
+import useAuth from "../hooks/useAuth";
 
 function AdminLayout() {
   const { auth } = useAuth();
