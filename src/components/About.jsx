@@ -2,16 +2,16 @@ import me from "../assets/me.jpg";
 
 function About() {
   return (
-    <div className="flex space-x-5 g-10 px-14 py-16 justify-center items-center">
-      <div className="flex gap-5 items-center w-1/2 justify-end">
-        <h1 className="text-4xl text-right font-bold">
+    <div className="flex flex-col gap-10 sm:px-14 py-16 justify-center items-center">
+      <div className="flex flex-col md:flex-row gap-5 items-center justify-end">
+        <img src={me} className="h-auto rounded-full w-44 md:w-60 lg:w-80" />
+        <h1 className="text-4xl text-right whitespace-nowrap font-bold md:text-4xl lg:text-5xl">
           Hi, I'm <span className="text-blue-600">Josh Ostblom</span>,<br />a
           Software Engineer.
         </h1>
-        <img src={me} className="w-56 h-auto rounded-full" />
       </div>
 
-      <div className="w-1/2 justify-start">
+      <div className="justify-start">
         <h2 className="text-3xl font-bold">About</h2>
         <p>
           I grew up in Omaha, Nebraska. There, I attended Ralston High School

@@ -42,8 +42,7 @@ function Resume() {
 
           <Document file={resumeUrl}>
             <Page
-              className="shadow-xl"
-              height={1000}
+              className="shadow-xl w-full max-w-screen"
               pageNumber={1}
               renderAnnotationLayer={false}
               renderTextLayer={false}

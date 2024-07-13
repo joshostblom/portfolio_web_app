@@ -20,12 +20,12 @@ function Layout(props) {
           ]}
         />
       </div>
-      <div className="p-5 pt-10">
+      <div className="p-5 pt-10 w-full">
         <Element name="about">
           <About />
         </Element>
         <Element name="resume">
-          <div className="flex flex-row w-full justify-center gap-10">
+          <div className="flex flex-col lg:flex-row w-full justify-center gap-10">
             <Resume />
             <div>
               <Skills tiers={skillTiers} />
