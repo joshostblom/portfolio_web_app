@@ -39,7 +39,7 @@ function Projects() {
         {projects &&
           projects.map((project) => (
             <li>
-              <div className="flex items-center bg-slate-200 dark:bg-slate-800 rounded-xl p-5 m-5">
+              <div className="flex items-center bg-white dark:bg-slate-800 rounded-xl p-5 m-5">
                 <img
                   src={project.image}
                   className="mr-5 w-60 h-60 object-cover object-center rounded-xl"

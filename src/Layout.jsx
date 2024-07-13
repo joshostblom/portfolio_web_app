@@ -4,6 +4,7 @@ import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 import { Element } from "react-scroll";
 import Skills from "./components/Skills";
+import skillTiers from "./data/skillData";
 
 function Layout(props) {
   return (
@@ -24,9 +25,11 @@ function Layout(props) {
           <About />
         </Element>
         <Element name="resume">
-          <div className="flex items-start w-full justify-center gap-10">
+          <div className="flex flex-row w-full justify-center gap-10">
             <Resume />
-            <Skills />
+            <div>
+              <Skills tiers={skillTiers} />
+            </div>
           </div>
         </Element>
         <Element name="projects">

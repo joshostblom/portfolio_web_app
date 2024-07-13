@@ -33,7 +33,7 @@ function Resume() {
         <div className="flex flex-col items-center">
           <a
             href={resumeUrl}
-            className="flex items-center w-auto shadow-sm bg-slate-200 dark:bg-slate-800 rounded-full py-3 px-10 mb-5"
+            className="flex items-center w-auto shadow-sm bg-white dark:bg-slate-800 rounded-full py-3 px-10 mb-5"
             download="Joshua_Ostblom_Resume.pdf"
           >
             Click to download

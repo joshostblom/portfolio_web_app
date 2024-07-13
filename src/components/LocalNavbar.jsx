@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 function LocalNavbar(props) {
   return (
-    <div className="flex shadow-sm bg-slate-200 dark:bg-slate-800 p-3 rounded-lg items-center px-5 select-none">
+    <div className="flex shadow-sm bg-white dark:bg-slate-800 p-3 rounded-lg items-center px-5 select-none">
       <h1 className="font-bold text-nowrap">Joshua Ostblom</h1>
       <nav className="flex w-full">
         <ul className="flex items-center ml-2">
