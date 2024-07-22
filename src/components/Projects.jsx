@@ -33,7 +33,9 @@ function Projects() {
 
   return (
     <div>
-      <h1 className="flex justify-center m-10 font-bold text-5xl">Projects</h1>
+      <h1 className="flex justify-center m-10 font-bold sm:text-3xl md:text-5xl">
+        Projects
+      </h1>
 
       <ul>
         {projects &&

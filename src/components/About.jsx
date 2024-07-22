@@ -12,8 +12,8 @@ function About() {
       </div>
 
       <div className="justify-start">
-        <h2 className="text-3xl font-bold">About</h2>
-        <p>
+        <h2 className="sm:text-3xl md:text-5xl font-bold">About</h2>
+        <p className="sm:text-xl">
           I grew up in Omaha, Nebraska. There, I attended Ralston High School
           where I was involved in band, robotics, and the honor's society. After
           getting my diploma in 2020, I attended the University of Nebraska

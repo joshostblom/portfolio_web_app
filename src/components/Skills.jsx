@@ -1,9 +1,11 @@
-function Skills({ tiers }) {
+function Skills(props) {
   return (
-    <div className="flex gap-8 flex-col">
-      <h2 className="text-3xl text-center font-bold w-full">Skills</h2>
+    <div className="flex gap-5 flex-col">
+      <h1 className="sm:text-3xl md:text-5xl text-center font-bold w-full">
+        Skills
+      </h1>
       <ul className="flex flex-col gap-3 h-full">
-        {tiers.map((tier, index) => (
+        {props.tiers.map((tier, index) => (
           <li
             key={index}
             className="flex flex-col flex-grow bg-white dark:bg-slate-800 rounded-xl p-5"

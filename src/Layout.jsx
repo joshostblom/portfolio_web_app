@@ -5,6 +5,8 @@ import Resume from "./components/Resume";
 import { Element } from "react-scroll";
 import Skills from "./components/Skills";
 import skillTiers from "./data/skillData";
+import socialData from "./data/socialData";
+import Experience from "./components/Experience";
 
 function Layout(props) {
   return (
@@ -16,8 +18,10 @@ function Layout(props) {
           links={[
             { name: "about", displayName: "About", offset: -100 },
             { name: "resume", displayName: "Resume", offset: -75 },
+            { name: "experience", displayName: "Experience" },
             { name: "projects", displayName: "Projects", offset: 50 },
           ]}
+          socials={socialData}
         />
       </div>
       <div className="p-5 pt-10 w-full">
@@ -25,12 +29,15 @@ function Layout(props) {
           <About />
         </Element>
         <Element name="resume">
-          <div className="flex flex-col lg:flex-row w-full justify-center gap-10">
+          <div className="flex flex-wrap w-full justify-center gap-10">
             <Resume />
             <div>
               <Skills tiers={skillTiers} />
             </div>
           </div>
+        </Element>
+        <Element name="experience">
+          <Experience />
         </Element>
         <Element name="projects">
           <Projects />

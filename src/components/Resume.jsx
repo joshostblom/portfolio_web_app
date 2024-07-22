@@ -10,6 +10,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 function Resume() {
   const [resumeUrl, setResumeUrl] = useState(null);
+  const [pageHeight, setPageHeight] = useState(1000);
 
   useEffect(() => {
     const getResume = async () => {
@@ -27,6 +28,25 @@ function Resume() {
     getResume();
   }, []);
 
+  useEffect(() => {
+    const updateHeight = () => {
+      const windowHeight = window.innerHeight;
+      if (window.innerWidth <= 640) {
+        // Tailwind's `sm` breakpoint
+        setPageHeight(windowHeight * 0.6);
+      } else if (window.innerWidth <= 768) {
+        // Tailwind's `md` breakpoint
+        setPageHeight(windowHeight * 0.9);
+      } else {
+        setPageHeight(windowHeight * 1.07);
+      }
+    };
+
+    updateHeight(); // Set initial height
+    window.addEventListener("resize", updateHeight); // Update height on resize
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
+
   return (
     <div>
       {resumeUrl && (
@@ -40,10 +60,13 @@ function Resume() {
             <RiFileDownloadLine className="pl-2 size-7" />
           </a>
 
-          <Document file={resumeUrl}>
+          <Document
+            file={resumeUrl}
+            className="shadow-xl w-full max-w-screen-2xl"
+          >
             <Page
-              className="shadow-xl w-full max-w-screen"
               pageNumber={1}
+              height={pageHeight}
               renderAnnotationLayer={false}
               renderTextLayer={false}
             />
