@@ -11,18 +11,61 @@ function About() {
         </h1>
       </div>
 
-      <div className="justify-start">
-        <h2 className="sm:text-3xl md:text-5xl font-bold">About</h2>
-        <p className="sm:text-xl">
-          I grew up in Omaha, Nebraska. There, I attended Ralston High School
-          where I was involved in band, robotics, and the honor's society. After
-          getting my diploma in 2020, I attended the University of Nebraska
-          Omaha where I pursued a bachelor's in computer science. In fall of
-          2022, I transferred to the University of Nebraska Lincoln where I am
-          continuing my degree. I am expected to graduate in December of 2024,
-          and I plan on continuing my education to earn a master's in computer
-          science by December of 2025 through an accelerated program.
-        </p>
+      <div>
+        <h1 className="sm:text-3xl md:text-5xl font-bold w-full text-center">
+          About Me
+        </h1>
+        <div className="flex flex-col gap-4">
+          <div>
+            <h2 className="text-2xl font-bold">Education</h2>
+            <p className="text-xl">
+              Before university, I attended Ralston High School where I was
+              involved in band, robotics, and the honor's society. After getting
+              my diploma in 2020, I attended the University of Nebraska Omaha
+              where I pursued a bachelor's in computer science. In fall of 2022,
+              I transferred to the University of Nebraska Lincoln where I am
+              continuing my degree. I am expected to graduate in December of
+              2024, and I plan on continuing my education to earn a master's in
+              computer science by December of 2025 through an accelerated
+              program.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold">Hobbies</h2>
+            <div className="flex flex-col lg:flex-row gap-5">
+              <p className="text-xl">
+                During my free time, I enjoy working on personal projects such
+                as this website. Outside of programming, I like to play tennis,
+                hang out with my friends, or astrophotography, which involes
+                taking pictures of celestial objects. You can find my photos on
+                my instagram&nbsp;
+                <a
+                  href="https://www.instagram.com/josh_likes_space/"
+                  className="text-blue-500 underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @josh_likes_space
+                </a>
+                . I'm also a big fan of music. I play guitar, piano, and
+                saxophone. In high school, I was involved in a quartet where we
+                played the national anthem at a strom chasers baseball game.
+              </p>
+              <div>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/zWLZ-wwnjgA?si=bfhQrIJlBUSIVbEx"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

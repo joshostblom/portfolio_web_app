@@ -28,6 +28,9 @@ function Layout(props) {
         <Element name="about">
           <About />
         </Element>
+        <Element name="experience">
+          <Experience />
+        </Element>
         <Element name="resume">
           <div className="flex flex-wrap w-full justify-center gap-10">
             <Resume />
@@ -35,9 +38,6 @@ function Layout(props) {
               <Skills tiers={skillTiers} />
             </div>
           </div>
-        </Element>
-        <Element name="experience">
-          <Experience />
         </Element>
         <Element name="projects">
           <Projects />

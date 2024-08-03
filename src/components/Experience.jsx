@@ -3,12 +3,10 @@ import sandhills from "../assets/sandhills.jpg";
 function Experience() {
   return (
     <div className="p-10">
-      <h1 className="sm:text-3xl md:text-5xl font-bold">Experience</h1>
-      <div className="flex flex-col lg:flex-row gap-5 pt-5">
-        <img
-          src={sandhills}
-          className="rounded-lg object-contain h-auto lg:w-1/2"
-        />
+      <h1 className="sm:text-3xl md:text-5xl font-bold w-full text-center">
+        Experience
+      </h1>
+      <div className="flex flex-col lg:flex-row gap-5 pt-5 items-center">
         <div>
           <h2 className="text-2xl font-bold">Sandhills Global</h2>
           <div className="text-xl">
@@ -44,6 +42,10 @@ function Experience() {
             .
           </div>
         </div>
+        <img
+          src={sandhills}
+          className="rounded-lg object-contain h-auto lg:w-1/2"
+        />
       </div>
     </div>
   );

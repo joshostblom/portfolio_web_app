@@ -1,7 +1,7 @@
 function Skills(props) {
   return (
     <div className="flex gap-5 flex-col">
-      <h1 className="sm:text-3xl md:text-5xl text-center font-bold w-full">
+      <h1 className="sm:text-3xl md:text-4xl text-center font-bold w-full">
         Skills
       </h1>
       <ul className="flex flex-col gap-3 h-full">
