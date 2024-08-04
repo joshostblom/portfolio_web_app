@@ -3,14 +3,12 @@ import { Link } from "react-scroll";
 
 function LocalNavbar(props) {
   return (
-    <div className="flex shadow-sm bg-white dark:bg-slate-800 p-3 rounded-lg items-center px-5 select-none text-xl">
-      <h1 className="font-bold text-nowrap">Joshua Ostblom</h1>
+    <div className="flex shadow-sm bg-white dark:bg-slate-800 p-3 rounded-lg items-center px-5 select-none lg:text-xl">
       <nav className="flex w-full">
-        <ul className="flex items-center ml-2">
+        <ul className="flex items-center ml-2 gap-4">
           {props.links.map((link, index) => (
             <li key={index}>
               <Link
-                className="px-2"
                 to={link.name.toLowerCase()}
                 spy={true}
                 smooth={true}
@@ -26,7 +24,7 @@ function LocalNavbar(props) {
           {props.socials.map((social, index) => (
             <li key={index}>
               <a href={social.link} target="_blank">
-                <social.icon className="text-3xl" />
+                <social.icon className="text-2xl lg:text-3xl" />
               </a>
             </li>
           ))}
@@ -36,14 +34,14 @@ function LocalNavbar(props) {
                 onClick={() => {
                   props.setDarkMode(false);
                 }}
-                className="cursor-pointer text-3xl"
+                className="cursor-pointer text-2xl lg:text-3xl"
               />
             ) : (
               <BsFillMoonStarsFill
                 onClick={() => {
                   props.setDarkMode(true);
                 }}
-                className="cursor-pointer text-3xl"
+                className="cursor-pointer text-2xl lg:text-3xl"
               />
             )}
           </div>

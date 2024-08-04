@@ -24,7 +24,7 @@ function Layout(props) {
           socials={socialData}
         />
       </div>
-      <div className="p-5 pt-10 w-full">
+      <div className="p-5 pt-16 w-full">
         <Element name="about">
           <About />
         </Element>

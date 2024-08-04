@@ -33,7 +33,7 @@ function Resume() {
       const windowHeight = window.innerHeight;
       if (window.innerWidth <= 640) {
         // Tailwind's `sm` breakpoint
-        setPageHeight(windowHeight * 0.6);
+        setPageHeight(windowHeight * 1);
       } else if (window.innerWidth <= 768) {
         // Tailwind's `md` breakpoint
         setPageHeight(windowHeight * 0.9);

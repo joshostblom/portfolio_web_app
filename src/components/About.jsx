@@ -2,7 +2,7 @@ import me from "../assets/me.jpg";
 
 function About() {
   return (
-    <div className="flex flex-col gap-10 sm:px-14 py-16 justify-center items-center">
+    <div className="flex flex-col gap-10 sm:px-14 py-10 justify-center items-center">
       <div className="flex flex-col md:flex-row gap-5 items-center justify-end">
         <img src={me} className="h-auto rounded-full w-44 md:w-60 lg:w-80" />
         <h1 className="text-4xl text-right whitespace-nowrap font-bold md:text-4xl lg:text-5xl">
@@ -12,13 +12,13 @@ function About() {
       </div>
 
       <div>
-        <h1 className="sm:text-3xl md:text-5xl font-bold w-full text-center">
+        <h1 className="text-3xl md:text-5xl font-bold w-full text-center">
           About Me
         </h1>
         <div className="flex flex-col gap-4">
           <div>
             <h2 className="text-2xl font-bold">Education</h2>
-            <p className="text-xl">
+            <p>
               Before university, I attended Ralston High School where I was
               involved in band, robotics, and the honor's society. After getting
               my diploma in 2020, I attended the University of Nebraska Omaha
@@ -33,11 +33,11 @@ function About() {
           <div>
             <h2 className="text-2xl font-bold">Hobbies</h2>
             <div className="flex flex-col lg:flex-row gap-5">
-              <p className="text-xl">
+              <p>
                 During my free time, I enjoy working on personal projects such
                 as this website. Outside of programming, I like to play tennis,
-                hang out with my friends, or astrophotography, which involes
-                taking pictures of celestial objects. You can find my photos on
+                hang out with my friends, or take pictures of the night sky,
+                otherwise known as astrophotography. You can find my photos on
                 my instagram&nbsp;
                 <a
                   href="https://www.instagram.com/josh_likes_space/"

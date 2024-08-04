@@ -1,7 +1,7 @@
 function Skills(props) {
   return (
     <div className="flex gap-5 flex-col">
-      <h1 className="sm:text-3xl md:text-4xl text-center font-bold w-full">
+      <h1 className="text-3xl md:text-5xl text-center font-bold w-full">
         Skills
       </h1>
       <ul className="flex flex-col gap-3 h-full">
@@ -16,13 +16,13 @@ function Skills(props) {
                 {tier.skills.map((skill, index) => (
                   <li key={index}>
                     <div
-                      className="rounded-xl p-2 drop-shadow-md sm:w-32 sm:h-40"
+                      className="rounded-xl p-2 drop-shadow-md w-20 h-24 lg:w-24 lg:h-32"
                       style={{
                         backgroundColor: `${tier.color}80`,
                       }}
                     >
                       <div className="flex flex-col text-center items-center dark:drop-shadow-lg text-xs">
-                        <skill.icon className="text-5xl m-5" />
+                        <skill.icon className="text-3xl lg:text-4xl m-3 lg:m-5" />
                         {skill.name}
                       </div>
                     </div>
