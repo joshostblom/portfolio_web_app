@@ -58,7 +58,7 @@ function AdminLogin() {
       >
         {isLoading ? "Is Loading" : "Log In"}
       </button>
-      {error && <div className="text-red-600">{error}</div>}
+      {error && <div className="text-red-600">Invalid login.</div>}
     </div>
   );
 }

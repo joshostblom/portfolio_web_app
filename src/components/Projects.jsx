@@ -32,8 +32,8 @@ function Projects() {
   }
 
   return (
-    <div>
-      <h1 className="flex justify-center m-10 font-bold sm:text-3xl md:text-5xl">
+    <div className="flex flex-col pt-10">
+      <h1 className="text-3xl md:text-5xl font-bold w-full text-center">
         Projects
       </h1>
 
