@@ -45,6 +45,23 @@ function AdminProjects() {
     setProjects(updatedProjects);
   };
 
+  const createProject = async () => {
+    try {
+      setIsLoading(true);
+      await apiPrivate.post(`project/update`, {
+        title: "Project title",
+        description: "project description",
+        link: "http://example.com",
+        image: "http://example.com/image.jpg",
+      });
+    } catch (error) {
+      setError(error);
+    } finally {
+      setIsLoading(false);
+      fetchProjects();
+    }
+  };
+
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -54,7 +71,7 @@ function AdminProjects() {
   }
 
   return (
-    <div>
+    <div className="flex flex-col justify-center m-10">
       <h1 className="flex justify-center m-10 font-bold text-5xl">Projects</h1>
 
       <ul>
@@ -115,6 +132,12 @@ function AdminProjects() {
             </li>
           ))}
       </ul>
+      <button
+        className="rounded-xl p-2 mt-5 bg-sky-400"
+        onClick={() => createProject()}
+      >
+        Create Project
+      </button>
     </div>
   );
 }
