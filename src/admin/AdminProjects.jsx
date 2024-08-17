@@ -63,7 +63,7 @@ function AdminProjects() {
             <li key={project.id}>
               <div className="flex items-center bg-slate-200 dark:bg-slate-800 rounded-xl p-5 m-5">
                 <img
-                  src={project.image}
+                  src={new URL(`${project.image}`, import.meta.url).href}
                   className="mr-5 w-60 h-60 object-cover object-center rounded-xl"
                 />
                 <div className="flex flex-col w-full gap-2">

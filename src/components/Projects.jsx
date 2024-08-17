@@ -40,18 +40,22 @@ function Projects() {
       <ul>
         {projects &&
           projects.map((project) => (
-            <li>
-              <div className="flex items-center bg-white dark:bg-slate-800 rounded-xl p-5 m-5">
-                <img
-                  src={project.image}
-                  className="mr-5 w-60 h-60 object-cover object-center rounded-xl"
-                />
-                <div className="flex flex-col">
-                  <a href={project.link} target="_blank" className="text-xl">
+            <li
+              key={project.id}
+              className="cursor-pointer"
+              onClick={() => window.open(project.link, "_blank")}
+            >
+              <div className="flex bg-white dark:bg-slate-800 rounded-xl p-5 m-5">
+                <div className="flex flex-col gap-2 justify-start flex-grow">
+                  <span className="text-left font-bold text-3xl lg:text-4xl">
                     {project.title}
-                  </a>
-                  <div>{project.description}</div>
+                  </span>
+                  <span>{project.description}</span>
                 </div>
+                <img
+                  className="w-0 lg:w-48 lg:h-48 object-cover object-center rounded-xl"
+                  src={new URL(`${project.image}`, import.meta.url).href}
+                />
               </div>
             </li>
           ))}

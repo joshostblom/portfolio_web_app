@@ -92,10 +92,6 @@ const skillTiers = [
         name: "Express.js",
         icon: SiExpress,
       },
-      {
-        name: "Satisfying Women",
-        icon: IoWoman,
-      },
     ],
   },
 ];
