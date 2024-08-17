@@ -6,14 +6,10 @@ function Experience() {
       <h1 className="text-3xl md:text-5xl font-bold w-full text-center">
         Experience
       </h1>
-      <div className="flex flex-col lg:flex-row gap-5 items-start">
+      <div className="flex flex-col lg:flex-col gap-5">
         <div>
           <h2 className="text-2xl font-bold">Sandhills Global</h2>
-          <div>
-            <img
-              src={sandhills}
-              className="rounded-lg object-contain m-2 h-auto lg:w-1/2 float-right"
-            />
+          <div className="flex flex-col gap-5">
             <p>
               Starting in May of 2022, I have been an intern at Sandhills Global
               in Lincoln, NE. During training, I gained experience working in an
@@ -46,6 +42,12 @@ function Experience() {
               </a>
               .
             </p>
+            <div className="flex justify-center">
+              <img
+                src={sandhills}
+                className="rounded-lg object-contain m-2 h-auto w-full lg:w-1/2"
+              />
+            </div>
           </div>
         </div>
       </div>

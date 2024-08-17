@@ -32,7 +32,7 @@ function About() {
           </div>
           <div>
             <h2 className="text-2xl font-bold">Hobbies</h2>
-            <div className="flex flex-col lg:flex-row gap-5">
+            <div className="flex flex-col gap-5">
               <p>
                 During my free time, I enjoy working on personal projects such
                 as this website. Outside of programming, I like to play tennis,
@@ -50,8 +50,19 @@ function About() {
                 . I'm also a big fan of music. I play guitar, piano, and
                 saxophone. In high school, I was involved in a quartet where we
                 played the national anthem at a strom chasers baseball game.
+                This semester I will be getting back into it by participating in
+                the&nbsp;
+                <a
+                  href="https://www.facebook.com/profile.php?id=100044109162937"
+                  className="text-blue-500 underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Lincoln Community Concert Band
+                </a>
+                .
               </p>
-              <div>
+              <div className="flex justify-center">
                 <iframe
                   width="560"
                   height="315"
