@@ -11,27 +11,27 @@ function Experience() {
           <h2 className="text-2xl font-bold">Sandhills Global</h2>
           <div className="flex flex-col gap-5">
             <p>
-              Starting in May of 2022, I have been an intern at Sandhills Global
-              in Lincoln, NE. During training, I gained experience working in an
-              AGILE environment, MVC architecture patterns, and using source
-              control. After training, I spent my first year in the Domains
-              department. While there, I worked with ASP.NET to create and
-              update endpoints for our API. I also used Razor and CSS to create
-              a portal for employees to gain information about the various
-              domains the company owned. Through this portal, users could check
-              the status of the domain, who to contact about the domain, and
-              list any sub-domains. After my time there, I was transferred to
-              the Mobile department. Here, I have been working with Android
-              Studio, Xamarin/Maui, and ASP.NET to develop the front and back
-              end for the mobile applications for Sandhills' many websites. My
-              favorite project here involved using Jetpack Compose, Retrofit,
-              and Dagger Hilt to create a WebView Android application from
-              scratch for all our TradeSites websites. During this endeavor, I
-              gained experience in proper architecture in programming, including
-              modularization, the MVVM pattern, and dependency injection. I also
-              learned how to properly utilize JWT tokens to communicate
-              authorization to our websites from our application. You can try
-              the app by downloading&nbsp;
+              Starting in May 2022, I have been interning at Sandhills Global in
+              Lincoln, NE. During my training, I gained experience working in an
+              Agile environment, with MVC architecture patterns, and using
+              source control. After training, I spent my first year in the
+              Domains department, where I worked with ASP.NET to create and
+              update endpoints for our API. I also used Razor and CSS to develop
+              a portal for employees to access information about the various
+              domains owned by the company. Through this portal, users could
+              check the status of domains, contact information, and list any
+              sub-domains. Following my time in the Domains department, I was
+              transferred to the Mobile department. Here, I have been working
+              with Android Studio, Xamarin/Maui, and ASP.NET to develop both the
+              front and back end of mobile applications for Sandhills' many
+              websites. My favorite project involved using Jetpack Compose,
+              Retrofit, and Dagger Hilt to create a WebView Android application
+              from scratch for all our TradeSites websites. This project
+              provided me with valuable experience in programming architecture,
+              including modularization, the MVVM pattern, and dependency
+              injection. I also learned to properly utilize JWT tokens for
+              authorization communication between our application and websites.
+              You can try the app by downloading&nbsp;
               <a
                 href="https://play.google.com/store/apps/details?id=sandhills.machinery.app&hl=en_US"
                 className="text-blue-500 underline"

@@ -19,14 +19,14 @@ function About() {
           <div>
             <h2 className="text-2xl font-bold">Education</h2>
             <p>
-              Before university, I attended Ralston High School where I was
-              involved in band, robotics, and the honor's society. After getting
-              my diploma in 2020, I attended the University of Nebraska Omaha
-              where I pursued a bachelor's in computer science. In fall of 2022,
-              I transferred to the University of Nebraska Lincoln where I am
-              continuing my degree. I am expected to graduate in December of
-              2024, and I plan on continuing my education to earn a master's in
-              computer science by December of 2025 through an accelerated
+              Before university, I attended Ralston High School, where I was
+              involved in band, robotics, and the honor society. After receiving
+              my diploma in 2020, I enrolled at the University of Nebraska Omaha
+              to pursue a bachelor's degree in computer science. In the fall of
+              2022, I transferred to the University of Nebraska Lincoln, where I
+              am continuing my studies. I am expected to graduate in December
+              2024 and plan to continue my education to earn a master's degree
+              in computer science by December 2025 through an accelerated
               program.
             </p>
           </div>
@@ -34,11 +34,11 @@ function About() {
             <h2 className="text-2xl font-bold">Hobbies</h2>
             <div className="flex flex-col gap-5">
               <p>
-                During my free time, I enjoy working on personal projects such
-                as this website. Outside of programming, I like to play tennis,
-                hang out with my friends, or take pictures of the night sky,
-                otherwise known as astrophotography. You can find my photos on
-                my instagram&nbsp;
+                During my free time, I enjoy working on personal projects like
+                this website. Outside of programming, I like to play tennis,
+                hang out with friends, and take pictures of the night sky, also
+                known as astrophotography. You can find my photos on
+                Instagram&nbsp;
                 <a
                   href="https://www.instagram.com/josh_likes_space/"
                   className="text-blue-500 underline"
@@ -47,11 +47,11 @@ function About() {
                 >
                   @josh_likes_space
                 </a>
-                . I'm also a big fan of music. I play guitar, piano, and
-                saxophone. In high school, I was involved in a quartet where we
-                played the national anthem at a strom chasers baseball game.
-                This semester I will be getting back into it by participating in
-                the&nbsp;
+                . I'm also a big fan of music; I play guitar, piano, and
+                saxophone. In high school, I was part of a quartet that
+                performed the national anthem at a Storm Chasers baseball game.
+                This semester, I’ll be getting back into music by participating
+                in the&nbsp;
                 <a
                   href="https://www.facebook.com/profile.php?id=100044109162937"
                   className="text-blue-500 underline"
