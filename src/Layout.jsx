@@ -19,7 +19,7 @@ function Layout(props) {
             { name: "about", displayName: "About", offset: -100 },
             { name: "experience", displayName: "Experience", offset: -50 },
             { name: "resume", displayName: "Resume", offset: -75 },
-            { name: "projects", displayName: "Projects", offset: -75 },
+            { name: "projects", displayName: "Projects", offset: -50 },
           ]}
           socials={socialData}
         />
