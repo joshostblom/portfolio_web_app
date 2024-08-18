@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "http://joshostblom.com/api";
+const BASE_URL = "https://joshostblom.com/api";
 
 export const api = axios.create({
   baseURL: BASE_URL,
