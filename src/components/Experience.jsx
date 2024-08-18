@@ -1,4 +1,4 @@
-import sandhills from "../assets/sandhills.jpg";
+import sandhills from "/images/sandhills.jpg";
 
 function Experience() {
   return (
