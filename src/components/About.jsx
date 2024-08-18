@@ -64,8 +64,7 @@ function About() {
               </p>
               <div className="flex justify-center">
                 <iframe
-                  width="560"
-                  height="315"
+                  className="w-full h-96"
                   src="https://www.youtube.com/embed/zWLZ-wwnjgA?si=bfhQrIJlBUSIVbEx"
                   title="YouTube video player"
                   frameborder="0"
