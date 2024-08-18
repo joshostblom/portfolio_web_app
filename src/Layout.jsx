@@ -18,26 +18,25 @@ function Layout(props) {
           links={[
             { name: "about", displayName: "About", offset: -100 },
             { name: "experience", displayName: "Experience", offset: -50 },
+            { name: "skills", displayName: "Skills", offset: -75 },
             { name: "resume", displayName: "Resume", offset: -75 },
             { name: "projects", displayName: "Projects", offset: -50 },
           ]}
           socials={socialData}
         />
       </div>
-      <div className="p-5 pt-16 w-full">
+      <div className="p-5 pt-16 w-full justify-center items-center">
         <Element name="about">
           <About />
         </Element>
         <Element name="experience">
           <Experience />
         </Element>
+        <Element name="skills">
+          <Skills tiers={skillTiers} />
+        </Element>
         <Element name="resume">
-          <div className="flex flex-wrap w-full justify-center gap-10">
-            <Resume />
-            <div>
-              <Skills tiers={skillTiers} />
-            </div>
-          </div>
+          <Resume />
         </Element>
         <Element name="projects">
           <Projects />

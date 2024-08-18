@@ -1,16 +1,9 @@
-import { Document, Page, pdfjs } from "react-pdf";
 import { RiFileDownloadLine } from "react-icons/ri";
 import { api } from "../api/api";
 import { useEffect, useState } from "react";
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
-).toString();
-
 function Resume() {
   const [resumeUrl, setResumeUrl] = useState(null);
-  const [pageHeight, setPageHeight] = useState(1000);
 
   useEffect(() => {
     const getResume = async () => {
@@ -28,49 +21,28 @@ function Resume() {
     getResume();
   }, []);
 
-  useEffect(() => {
-    const updateHeight = () => {
-      const windowHeight = window.innerHeight;
-      if (window.innerWidth <= 640) {
-        // Tailwind's `sm` breakpoint
-        setPageHeight(windowHeight * 1);
-      } else if (window.innerWidth <= 768) {
-        // Tailwind's `md` breakpoint
-        setPageHeight(windowHeight * 0.9);
-      } else {
-        setPageHeight(windowHeight * 1.07);
-      }
-    };
-
-    updateHeight(); // Set initial height
-    window.addEventListener("resize", updateHeight); // Update height on resize
-    return () => window.removeEventListener("resize", updateHeight);
-  }, []);
-
   return (
-    <div>
+    <div className="py-5">
       {resumeUrl && (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col gap-5 items-center">
+          <h1 className="text-3xl md:text-5xl text-center font-bold w-full">
+            Resume
+          </h1>
           <a
             href={resumeUrl}
-            className="flex items-center w-auto shadow-sm bg-white dark:bg-slate-800 rounded-full py-3 px-10 mb-5"
+            className="flex items-center w-auto shadow-sm bg-white dark:bg-slate-800 rounded-full py-3 px-20"
             download="Joshua_Ostblom_Resume.pdf"
           >
             Click to download
             <RiFileDownloadLine className="pl-2 size-7" />
           </a>
-
-          <Document
-            file={resumeUrl}
-            className="shadow-xl w-full max-w-screen-2xl"
-          >
-            <Page
-              pageNumber={1}
-              height={pageHeight}
-              renderAnnotationLayer={false}
-              renderTextLayer={false}
+          <div className="relative w-4/5" style={{ paddingTop: "100%" }}>
+            <iframe
+              className="absolute top-0 left-0 w-full h-full border border-gray-300 rounded-lg shadow-lg"
+              src="https://joshostblom.com/api/resources/get/resume"
+              title="Resume PDF"
             />
-          </Document>
+          </div>
         </div>
       )}
     </div>
