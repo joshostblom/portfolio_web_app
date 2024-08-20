@@ -41,22 +41,24 @@ function Layout(props) {
         )}
       </div>
 
-      <div className="p-5 pt-16 w-full justify-center items-center">
-        <Element name="about">
-          <About />
-        </Element>
-        <Element name="experience">
-          <Experience />
-        </Element>
-        <Element name="skills">
-          <Skills tiers={skillTiers} />
-        </Element>
-        <Element name="resume">
-          <Resume />
-        </Element>
-        <Element name="projects">
-          <Projects />
-        </Element>
+      <div className="flex justify-center">
+        <div className="p-5 pt-16 max-w-6xl justify-center items-center">
+          <Element name="about">
+            <About />
+          </Element>
+          <Element name="experience">
+            <Experience />
+          </Element>
+          <Element name="skills">
+            <Skills tiers={skillTiers} />
+          </Element>
+          <Element name="resume">
+            <Resume />
+          </Element>
+          <Element name="projects">
+            <Projects />
+          </Element>
+        </div>
       </div>
     </div>
   );
