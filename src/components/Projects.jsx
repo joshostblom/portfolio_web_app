@@ -45,7 +45,7 @@ function Projects() {
               className="cursor-pointer"
               onClick={() => window.open(project.link, "_blank")}
             >
-              <div className="flex bg-white dark:bg-slate-800 rounded-xl p-5 m-5">
+              <div className="flex bg-white dark:bg-slate-800 rounded-xl p-5 my-5">
                 <div className="flex flex-col gap-2 justify-start flex-grow">
                   <span className="text-left font-bold text-3xl lg:text-4xl">
                     {project.title}
