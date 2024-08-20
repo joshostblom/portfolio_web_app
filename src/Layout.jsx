@@ -23,7 +23,7 @@ function Layout(props) {
 
   return (
     <div>
-      <div className="z-50">
+      <div className="z-50 absolute">
         {sideMenuOpen && (
           <SideMenu setSideMenuOpen={setSideMenuOpen} links={menuItems} />
         )}

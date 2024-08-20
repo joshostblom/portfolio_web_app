@@ -16,12 +16,12 @@ function Skills(props) {
                 {tier.skills.map((skill, index) => (
                   <li key={index}>
                     <div
-                      className="rounded-xl p-2 drop-shadow-md w-20 h-24 lg:w-32 lg:h-44"
+                      className="rounded-xl shadow-md p-2 w-20 h-24 lg:w-32 lg:h-44"
                       style={{
                         backgroundColor: `${tier.color}80`,
                       }}
                     >
-                      <div className="flex flex-col text-center items-center dark:drop-shadow-lg text-xs lg:text-lg">
+                      <div className="flex flex-col text-center items-center text-xs lg:text-lg">
                         <skill.icon className="text-3xl lg:text-5xl m-3 lg:m-5" />
                         {skill.name}
                       </div>

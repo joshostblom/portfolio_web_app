@@ -38,7 +38,7 @@ function Resume() {
           </a>
           <div className="relative w-4/5" style={{ paddingTop: "100%" }}>
             <iframe
-              className="absolute top-0 left-0 w-full h-full border border-gray-300 rounded-lg shadow-lg"
+              className="absolute top-0 left-0 w-full h-full border border-gray-300 rounded-lg shadow-lg z-0"
               src="https://joshostblom.com/api/resources/get/resume"
               title="Resume PDF"
             />

@@ -10,9 +10,9 @@ function SideMenu(props) {
           <div className="flex flex-col gap-5 w-full items-center">
             <div className="flex flex-row gap-4 items-center">
               <img src={me} className="h-12 w-12 rounded-full"></img>
-              <div className="font-bold text-2xl">Joshua Ostblom</div>
+              <div className="font-bold text-xl">Joshua Ostblom</div>
               <MdArrowBackIos
-                className="text-2xl cursor-pointer"
+                className="text-3xl cursor-pointer"
                 onClick={() => {
                   props.setSideMenuOpen(false);
                 }}
