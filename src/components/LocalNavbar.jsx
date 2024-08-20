@@ -9,9 +9,9 @@ function LocalNavbar(props) {
         {/* Hamburger menu for smaller screens */}
         <div className="hidden max-sm:flex items-center">
           <FiMenu
-            className="text-2xl"
+            className="text-2xl cursor-pointer"
             onClick={() => {
-              props.setMenuOpen(!props.menuOpen);
+              props.setSideMenuOpen(!props.sideMenuOpen);
             }}
           />
         </div>
@@ -20,6 +20,7 @@ function LocalNavbar(props) {
           {props.links.map((link, index) => (
             <li key={index}>
               <Link
+                className="cursor-pointer"
                 to={link.name.toLowerCase()}
                 spy={true}
                 smooth={true}

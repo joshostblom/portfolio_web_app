@@ -11,37 +11,30 @@ import { useState } from "react";
 import SideMenu from "./components/SideMenu";
 
 function Layout(props) {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [sideMenuOpen, setSideMenuOpen] = useState(false);
+
+  const menuItems = [
+    { name: "about", displayName: "About", offset: -100 },
+    { name: "experience", displayName: "Experience", offset: -75 },
+    { name: "skills", displayName: "Skills", offset: -75 },
+    { name: "resume", displayName: "Resume", offset: -75 },
+    { name: "projects", displayName: "Projects", offset: -50 },
+  ];
 
   return (
     <div>
       <div className="z-50">
-        {menuOpen && (
-          <SideMenu
-            setMenuOpen={setMenuOpen}
-            links={[
-              { name: "about", displayName: "About", offset: -100 },
-              { name: "experience", displayName: "Experience", offset: -75 },
-              { name: "skills", displayName: "Skills", offset: -75 },
-              { name: "resume", displayName: "Resume", offset: -75 },
-              { name: "projects", displayName: "Projects", offset: -50 },
-            ]}
-          />
+        {sideMenuOpen && (
+          <SideMenu setSideMenuOpen={setSideMenuOpen} links={menuItems} />
         )}
-        {!menuOpen && (
+        {!sideMenuOpen && (
           <div className="fixed w-full p-5">
             <LocalNavbar
               darkMode={props.darkMode}
               setDarkMode={props.setDarkMode}
-              menuOpen={menuOpen}
-              setMenuOpen={setMenuOpen}
-              links={[
-                { name: "about", displayName: "About", offset: -100 },
-                { name: "experience", displayName: "Experience", offset: -75 },
-                { name: "skills", displayName: "Skills", offset: -75 },
-                { name: "resume", displayName: "Resume", offset: -75 },
-                { name: "projects", displayName: "Projects", offset: -50 },
-              ]}
+              sideMenuOpen={sideMenuOpen}
+              setSideMenuOpen={setSideMenuOpen}
+              links={menuItems}
               socials={socialData}
             />
           </div>
