@@ -1,11 +1,22 @@
 import { BsFillMoonStarsFill, BsSunFill } from "react-icons/bs";
+import { FiMenu } from "react-icons/fi";
 import { Link } from "react-scroll";
 
 function LocalNavbar(props) {
   return (
     <div className="flex shadow-sm bg-white dark:bg-slate-800 p-3 rounded-lg items-center px-5 select-none lg:text-xl">
       <nav className="flex w-full">
-        <ul className="flex items-center ml-2 gap-4">
+        {/* Hamburger menu for smaller screens */}
+        <div className="hidden max-sm:flex items-center">
+          <FiMenu
+            className="text-2xl"
+            onClick={() => {
+              props.setMenuOpen(!props.menuOpen);
+            }}
+          />
+        </div>
+        {/* Items listed accross for larger screens */}
+        <ul className="max-sm:hidden flex items-center ml-2 gap-4 ">
           {props.links.map((link, index) => (
             <li key={index}>
               <Link
