@@ -6,16 +6,14 @@ import {
   FaUnity,
 } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
-import { IoWoman } from "react-icons/io5";
 import {
   SiCplusplus,
-  SiCsharp,
   SiDotnet,
   SiExpress,
   SiJetpackcompose,
-  SiXamarin,
 } from "react-icons/si";
-import { TbBrandKotlin } from "react-icons/tb";
+import { PiFileCSharp } from "react-icons/pi";
+import { TbBrandKotlin, TbBrandXamarin } from "react-icons/tb";
 
 const skillTiers = [
   {
@@ -36,7 +34,7 @@ const skillTiers = [
       },
       {
         name: "C#",
-        icon: SiCsharp,
+        icon: PiFileCSharp,
       },
       {
         name: "Unity",
@@ -58,7 +56,7 @@ const skillTiers = [
       },
       {
         name: "Xamarin",
-        icon: SiXamarin,
+        icon: TbBrandXamarin,
       },
       {
         name: "C++",

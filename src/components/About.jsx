@@ -1,14 +1,20 @@
 import me from "/images/me.jpg";
+import { motion } from "framer-motion";
 
 function About() {
   return (
     <div className="flex flex-col gap-10 sm:px-14 py-10 justify-center items-center">
       <div className="flex flex-col md:flex-row gap-5 items-center justify-end">
         <img src={me} className="h-auto rounded-full w-44 md:w-60 lg:w-80" />
-        <h1 className="text-4xl text-right whitespace-nowrap font-bold md:text-4xl lg:text-5xl">
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 5 }}
+          className="text-4xl text-right whitespace-nowrap font-bold md:text-4xl lg:text-5xl"
+        >
           Hi, I'm <span className="text-blue-600">Josh Ostblom</span>,<br />a
           Software Engineer.
-        </h1>
+        </motion.span>
       </div>
 
       <div>
