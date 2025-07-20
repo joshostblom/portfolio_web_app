@@ -34,7 +34,7 @@ function Projects() {
   return (
     <div className="flex flex-col pt-10">
       <h1 className="text-3xl md:text-5xl font-bold w-full text-center">
-        Projects
+        Personal Projects
       </h1>
 
       <ul>

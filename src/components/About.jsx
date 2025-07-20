@@ -24,21 +24,22 @@ function About() {
               my diploma in 2020, I enrolled at the University of Nebraska Omaha
               to pursue a bachelor's degree in computer science. In the fall of
               2022, I transferred to the University of Nebraska Lincoln, where I
-              am continuing my studies. I am expected to graduate in December
-              2024 and plan to continue my education to earn a master's degree
-              in computer science by December 2025 through an accelerated
-              program.
+              am continuing my studies. I have earned my bachelor's degree in
+              December 2024 with highest distinction and I'm finishing a
+              master's degree in computer science by December 2025 through an
+              accelerated program. I have achieved a spot on the Dean's list for
+              every semester completed so far.
             </p>
           </div>
           <div>
             <h2 className="text-2xl font-bold">Hobbies</h2>
             <div className="flex flex-col gap-5">
               <p>
-                During my free time, I enjoy working on personal projects like
-                this website. Outside of programming, I like to play tennis,
-                hang out with friends, and take pictures of the night sky, also
-                known as astrophotography. You can find my photos on
-                Instagram&nbsp;
+                During my free time, I enjoy working on personal projects such
+                as Android apps, home labs, and other applications like this
+                website. Outside of programming, I enjoy tennis, hanging out
+                with friends, and take pictures of the night sky. You can find
+                my photos on my astrophotography Instagram&nbsp;
                 <a
                   href="https://www.instagram.com/josh_likes_space/"
                   className="text-blue-500 underline"

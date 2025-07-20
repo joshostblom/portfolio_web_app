@@ -8,6 +8,19 @@ function Experience() {
       </h1>
       <div className="flex flex-col lg:flex-col gap-5">
         <div>
+          <h2 className="text-2xl font-bold">Lyft</h2>
+          <p>
+            Throughout the summer of 2025 I had the privelege of working at Lyft
+            as an Android intern in San Francisco. My project involved creating
+            a space for incentives on the home screen. These incentives informed
+            the user about deals and perks they currenlty have when requesting a
+            ride with the goal of increasing user interest. The project involved
+            two UI variants, both implemented with Jetpack Compose. Utilizing
+            MVI architecture, any interaction with the UI triggered an intent
+            which then reduces the state within the ViewModel to update the
+            view. Both variants were also setup with impression tracking to
+            analyze user preference through experimentation.
+          </p>
           <div className="flex justify-center">
             <img
               className="rounded-lg object-contain m-2 h-auto w-full"
