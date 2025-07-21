@@ -1,11 +1,11 @@
 import LocalNavbar from "./components/LocalNavbar";
 import About from "./components/About";
 import Projects from "./components/Projects";
-import Resume from "./components/Resume";
 import { Element } from "react-scroll";
 import Skills from "./components/Skills";
 import skillTiers from "./data/skillData";
 import socialData from "./data/socialData";
+import { motion, AnimatePresence } from "framer-motion";
 import Experience from "./components/Experience";
 import { useState } from "react";
 import SideMenu from "./components/SideMenu";
@@ -17,16 +17,26 @@ function Layout(props) {
     { name: "about", displayName: "About", offset: -100 },
     { name: "experience", displayName: "Experience", offset: -75 },
     { name: "skills", displayName: "Skills", offset: -75 },
-    { name: "resume", displayName: "Resume", offset: -75 },
     { name: "projects", displayName: "Projects", offset: -50 },
   ];
 
   return (
     <div>
       <div className="z-50 absolute">
-        {sideMenuOpen && (
-          <SideMenu setSideMenuOpen={setSideMenuOpen} links={menuItems} />
-        )}
+        <AnimatePresence>
+          {sideMenuOpen && (
+            <motion.div
+              key="sideMenu"
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "tween", duration: 0.3 }}
+              className="fixed top-0 left-0 h-full w-64 z-50 shadow-lg"
+            >
+              <SideMenu setSideMenuOpen={setSideMenuOpen} links={menuItems} />
+            </motion.div>
+          )}
+        </AnimatePresence>
         {!sideMenuOpen && (
           <div className="fixed w-full p-5">
             <LocalNavbar
@@ -51,9 +61,6 @@ function Layout(props) {
           </Element>
           <Element name="skills">
             <Skills tiers={skillTiers} />
-          </Element>
-          <Element name="resume">
-            <Resume />
           </Element>
           <Element name="projects">
             <Projects />
