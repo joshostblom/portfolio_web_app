@@ -6,6 +6,7 @@ function TitleCard() {
   const totalChars = fullText.length;
 
   const [visibleCount, setVisibleCount] = useState(0);
+  const [cursorVisible, setCursorVisible] = useState(true);
 
   useEffect(() => {
     if (visibleCount < totalChars) {
@@ -13,6 +14,10 @@ function TitleCard() {
         setVisibleCount(visibleCount + 1);
       }, 65); // controls typing speed
       return () => clearTimeout(timeout);
+    } else {
+      setTimeout(() => {
+        setCursorVisible(false);
+      }, 750);
     }
   }, [visibleCount]);
 
@@ -39,7 +44,7 @@ function TitleCard() {
         })}
 
         {/* Blinking Cursor */}
-        {visibleCount < totalChars && (
+        {cursorVisible && (
           <span className="inline-block w-[0.5ch] animate-blink">|</span>
         )}
       </div>
