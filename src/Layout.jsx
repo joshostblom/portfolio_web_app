@@ -16,9 +16,9 @@ function Layout(props) {
 
   const menuItems = [
     { name: "about", displayName: "About", offset: -100 },
+    { name: "skills", displayName: "Skills", offset: -75 },
     { name: "education", displayName: "Education", offset: -100 },
     { name: "experience", displayName: "Experience", offset: -75 },
-    { name: "skills", displayName: "Skills", offset: -75 },
     { name: "projects", displayName: "Projects", offset: -50 },
   ];
 
@@ -58,14 +58,14 @@ function Layout(props) {
           <Element name="about">
             <About />
           </Element>
+          <Element name="skills">
+            <Skills tiers={skillTiers} />
+          </Element>
           <Element name="education">
             <Education />
           </Element>
           <Element name="experience">
             <Experience />
-          </Element>
-          <Element name="skills">
-            <Skills tiers={skillTiers} />
           </Element>
           <Element name="projects">
             <Projects />

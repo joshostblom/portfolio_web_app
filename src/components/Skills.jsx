@@ -1,31 +1,32 @@
+import { motion } from "framer-motion";
+
 function Skills(props) {
   return (
-    <div className="flex gap-5 flex-col justify-center items-center py-5">
-      <h1 className="text-3xl md:text-5xl text-center font-bold w-full">
-        Skills
-      </h1>
-      <ul className="flex flex-col gap-3 h-full">
+    <div className="flex gap-5 flex-col justify-center items-center py-5 w-full">
+      <h1 className="text-3xl md:text-5xl text-center font-bold">Skills</h1>
+      <ul className="flex flex-col gap-3 w-full">
         {props.tiers.map((tier, index) => (
           <li
             key={index}
             className="flex flex-col flex-grow bg-white dark:bg-slate-800 rounded-xl p-5"
           >
-            <div className="flex flex-col gap-2">
-              <h3 className="text-lg lg:text-xl">{tier.name}</h3>
-              <ul className={`flex flex-wrap gap-3`}>
+            <div className="flex flex-col gap-2 md:gap-4">
+              <h3 className="font-bold text-lg lg:text-xl">{tier.name}</h3>
+              <ul className={`flex flex-wrap gap-0.5 md:gap-5`}>
                 {tier.skills.map((skill, index) => (
-                  <li key={index}>
-                    <div
-                      className="rounded-xl shadow-md p-2 w-20 h-24 lg:w-32 lg:h-44"
-                      style={{
-                        backgroundColor: `${tier.color}80`,
-                      }}
+                  <li
+                    key={index}
+                    className="flex flex-col py-2 text-center items-center"
+                  >
+                    <motion.div
+                      className="flex rounded-xl shadow-md p-4 justify-center"
+                      style={{ backgroundColor: `${skill.color}80` }}
+                      whileHover={{ y: -10 }}
+                      transition={{ type: "spring", stiffness: 300 }}
                     >
-                      <div className="flex flex-col text-center items-center text-xs lg:text-lg">
-                        <skill.icon className="text-3xl lg:text-5xl m-3 lg:m-5" />
-                        {skill.name}
-                      </div>
-                    </div>
+                      <skill.icon className="text-3xl md:text-6xl" />
+                    </motion.div>
+                    <div className="w-20 text-xs md:text-sm">{skill.name}</div>
                   </li>
                 ))}
               </ul>
