@@ -9,7 +9,7 @@ function Education() {
       <h1 className="text-3xl md:text-5xl font-bold w-full text-center">
         Education
       </h1>
-      <div className="flex flex-col md:flex-row justify-evenly gap-2">
+      <div className="flex flex-col justify-evenly gap-2">
         <EducationCard
           logos={[unlLogo]}
           title="M.S. Computer Science"
