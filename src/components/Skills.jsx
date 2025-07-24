@@ -8,7 +8,7 @@ function Skills(props) {
         {props.tiers.map((tier, index) => (
           <li
             key={index}
-            className="flex flex-col flex-grow bg-white dark:bg-slate-800 rounded-xl p-5"
+            className="flex flex-col flex-grow bg-slate-100 dark:bg-slate-800 rounded-xl p-5"
           >
             <div className="flex flex-col gap-2 md:gap-4">
               <h3 className="font-bold text-lg lg:text-xl">{tier.name}</h3>
@@ -20,11 +20,11 @@ function Skills(props) {
                   >
                     <motion.div
                       className="flex rounded-xl shadow-md p-4 justify-center"
-                      style={{ backgroundColor: `${skill.color}80` }}
+                      style={{ backgroundColor: `${skill.color}` }}
                       whileHover={{ y: -10 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
-                      <skill.icon className="text-3xl md:text-6xl" />
+                      <skill.icon className="text-3xl md:text-6xl text-white" />
                     </motion.div>
                     <div className="w-20 text-xs md:text-sm">{skill.name}</div>
                   </li>

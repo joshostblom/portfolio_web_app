@@ -1,6 +1,6 @@
 function EducationCard(props) {
   return (
-    <div className="flex shadow-sm bg-white dark:bg-slate-800 p-3 rounded-lg">
+    <div className="flex shadow-sm bg-slate-100 dark:bg-slate-800 p-3 rounded-lg">
       <div className="flex flex-col gap-4">
         <div className="flex flex-row gap-4">
           {props.logos.map((logo) => (

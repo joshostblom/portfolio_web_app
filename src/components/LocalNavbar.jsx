@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 
 function LocalNavbar(props) {
   return (
-    <div className="flex shadow-sm bg-white dark:bg-slate-800 p-3 rounded-lg items-center px-5 select-none lg:text-xl">
+    <div className="flex shadow-md bg-slate-100 dark:bg-slate-800 p-3 rounded-lg items-center px-5 select-none lg:text-xl">
       <nav className="flex w-full">
         {/* Hamburger menu for smaller screens */}
         <div className="hidden max-sm:flex items-center">
