@@ -9,12 +9,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import Experience from "./components/Experience";
 import { useState } from "react";
 import SideMenu from "./components/SideMenu";
+import Education from "./components/Education";
 
 function Layout(props) {
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
 
   const menuItems = [
     { name: "about", displayName: "About", offset: -100 },
+    { name: "education", displayName: "Education", offset: -100 },
     { name: "experience", displayName: "Experience", offset: -75 },
     { name: "skills", displayName: "Skills", offset: -75 },
     { name: "projects", displayName: "Projects", offset: -50 },
@@ -55,6 +57,9 @@ function Layout(props) {
         <div className="p-5 pt-16 max-w-6xl justify-center items-center">
           <Element name="about">
             <About />
+          </Element>
+          <Element name="education">
+            <Education />
           </Element>
           <Element name="experience">
             <Experience />
