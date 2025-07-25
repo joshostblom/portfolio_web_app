@@ -33,7 +33,7 @@ function TitleCard(props) {
           src={me}
           className="h-auto rounded-full shadow-md w-44 md:w-60 lg:w-80"
         />
-        <div className="p-5 rounded-lg shadow-md bg-slate-100 dark:bg-slate-800 text-4xl text-right font-bold md:text-4xl lg:text-5xl">
+        <div className="p-5 rounded-lg shadow-md bg-slate-100 dark:bg-slate-800 text-4xl font-bold md:text-4xl lg:text-5xl">
           {visibleText.split("").map((char, i) => {
             const isBlue = i >= 8 && i < 20; // highlight "Josh Ostblom"
             const className =
