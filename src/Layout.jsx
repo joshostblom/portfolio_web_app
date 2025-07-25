@@ -10,6 +10,7 @@ import Experience from "./components/Experience";
 import { useState } from "react";
 import SideMenu from "./components/SideMenu";
 import Education from "./components/Education";
+import TitleCard from "./components/TitleCard";
 
 function Layout(props) {
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
@@ -53,8 +54,9 @@ function Layout(props) {
         )}
       </div>
 
-      <div className="flex justify-center">
-        <div className="p-5 pt-16 max-w-6xl justify-center items-center">
+      <div className="flex flex-col justify-center pt-16 justify-center items-center">
+        <TitleCard isDarkMode={props.darkMode} />
+        <div className="p-5 max-w-6xl">
           <Element name="about">
             <About />
           </Element>

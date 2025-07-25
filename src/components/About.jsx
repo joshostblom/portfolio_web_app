@@ -3,8 +3,6 @@ import TitleCard from "./TitleCard.jsx";
 function About() {
   return (
     <div className="flex flex-col gap-10 sm:px-14 py-10 justify-center items-center">
-      <TitleCard />
-
       <div>
         <h1 className="text-3xl md:text-5xl font-bold w-full text-center">
           About Me
