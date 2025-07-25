@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import me from "/images/me.jpg";
 import StarBackground from "./StarBackground.jsx";
 
-function TitleCard(props) {
+function TitleCard() {
   const fullText = `Hi, I'm Josh Ostblom,\na Software Engineer.`;
   const totalChars = fullText.length;
 
@@ -26,7 +26,7 @@ function TitleCard(props) {
 
   return (
     <div className="relative h-screen w-full">
-      <StarBackground isDarkMode={props.isDarkMode} />
+      <StarBackground />
 
       <div className="flex flex-col h-full md:flex-row gap-5 items-center justify-center relative z-10">
         <img

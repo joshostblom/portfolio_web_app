@@ -55,7 +55,7 @@ function Layout(props) {
       </div>
 
       <div className="flex flex-col justify-center pt-16 justify-center items-center">
-        <TitleCard isDarkMode={props.darkMode} />
+        <TitleCard />
         <div className="p-5 max-w-6xl">
           <Element name="about">
             <About />

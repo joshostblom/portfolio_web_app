@@ -62,7 +62,7 @@ function generateStars(n) {
       left: `${Math.random() * 100}%`,
       width: `${size}px`,
       height: `${size}px`,
-      animation: `twinkle ${(Math.random() * 3 + 2).toFixed(2)}s ease-in-out ${(
+      animation: `twinkle ${(Math.random() * 5 + 2).toFixed(2)}s ease-in-out ${(
         Math.random() * 5
       ).toFixed(2)}s infinite`,
       color:
@@ -71,7 +71,7 @@ function generateStars(n) {
   });
 }
 
-const StarBackground = (props) => {
+const StarBackground = () => {
   // 5. Get adaptive star count
   const starCount = useResponsiveCount(750);
 
@@ -102,7 +102,7 @@ const StarBackground = (props) => {
             width: star.width,
             height: star.height,
             animation: star.animation,
-            backgroundColor: props.isDarkMode ? "#ffffff" : star.color,
+            backgroundColor: star.color,
             opacity: 0,
           }}
         />
