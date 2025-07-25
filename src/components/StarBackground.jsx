@@ -73,7 +73,7 @@ function generateStars(n) {
 
 const StarBackground = (props) => {
   // 5. Get adaptive star count
-  const starCount = useResponsiveCount(500);
+  const starCount = useResponsiveCount(750);
 
   // 6. Manage stars in state, adding/removing only the delta
   const [stars, setStars] = useState(() => generateStars(starCount));
