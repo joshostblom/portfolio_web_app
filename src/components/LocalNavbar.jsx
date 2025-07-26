@@ -37,7 +37,7 @@ function LocalNavbar(props) {
           <a
             href="api/resources/get/resume"
             target="_blank"
-            className="inline-block px-5 py-1 text-white font-bold rounded-full bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-[length:400%_100%] bg-[position:0%_center] hover:animate-glimmer"
+            className="inline-block px-5 py-1 text-white font-bold rounded-full bg-gradient-to-r from-pink-400 via-blue-400 to-pink-400 bg-[length:400%_100%] bg-[position:0%_center] hover:animate-glimmer"
           >
             Resume
           </a>
