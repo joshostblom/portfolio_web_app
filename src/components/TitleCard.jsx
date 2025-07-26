@@ -23,6 +23,14 @@ function TitleCard() {
   }, [visibleCount]);
 
   const visibleText = fullText.slice(0, visibleCount);
+  const CONFETTI_COLORS = [
+    "#60A5FA", // blue-400
+    "#F87171", // red-400
+    "#34D399", // green-400
+    "#FBBF24", // yellow-400
+    "#A78BFA", // violet-400
+    "#F472B6", // pink-400
+  ];
 
   return (
     <div className="relative h-screen w-full">
@@ -31,20 +39,22 @@ function TitleCard() {
       <div className="flex flex-col h-full md:flex-row gap-5 items-center justify-center relative z-10">
         <img
           src={me}
-          className="h-auto rounded-full shadow-md w-44 md:w-60 lg:w-80"
+          className="h-auto rounded-full shadow-md w-44 md:w-60 lg:w-96"
         />
         <div className="p-5 rounded-lg shadow-md bg-slate-100 dark:bg-slate-800 text-4xl font-bold md:text-4xl lg:text-5xl">
           {visibleText.split("").map((char, i) => {
-            const isBlue = i >= 8 && i < 20; // highlight "Josh Ostblom"
-            const className =
-              char === "\n"
-                ? "block"
-                : isBlue
-                ? "inline text-blue-600"
-                : "inline";
+            const isNameChar = i >= 8 && i < 20; // "Josh Ostblom"
+            const confettiColor =
+              isNameChar && CONFETTI_COLORS[(i - 8) % CONFETTI_COLORS.length];
+
+            const style = isNameChar ? { color: confettiColor } : {};
 
             return (
-              <span key={i} className={className}>
+              <span
+                key={i}
+                className={char === "\n" ? "block" : "inline"}
+                style={style}
+              >
                 {char}
               </span>
             );
