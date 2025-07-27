@@ -2,13 +2,14 @@ import sandhills from "/images/sandhills.jpg";
 
 function Experience() {
   return (
-    <div className="flex flex-col gap-5 sm:px-14 py-5 justify-center items-center">
-      <h1 className="text-3xl md:text-5xl font-bold w-full text-center">
-        Experience
-      </h1>
+    <div className="flex flex-col gap-5 py-5">
+      <h1 className="title">EXPERIENCE</h1>
       <div className="flex flex-col lg:flex-col gap-5">
-        <div>
-          <h2 className="text-2xl font-bold">Lyft</h2>
+        <div className="flex flex-col shadow-sm bg-slate-100 dark:bg-slate-800 p-3 rounded-lg">
+          <div className="flex flex-row gap-2 items-center">
+            <h2 className="text-2xl font-bold text-lyftpink">LYFT</h2>
+            <h2 className="text-xl">May 2025 - August 2025</h2>
+          </div>
           <p>
             Throughout the summer of 2025 I had the privelege of working at Lyft
             as an Android intern in San Francisco. My project involved creating
@@ -21,13 +22,15 @@ function Experience() {
             view. Both variants were also setup with impression tracking to
             analyze user preference through experimentation.
           </p>
-          <div className="flex justify-center">
-            <img
-              className="rounded-lg object-contain m-2 h-auto w-full"
-              src={sandhills}
-            />
+        </div>
+
+        <div className="flex flex-col shadow-sm bg-slate-100 dark:bg-slate-800 p-3 rounded-lg">
+          <div className="flex flex-row gap-2 items-center">
+            <h2 className="text-2xl font-bold text-sandhillsblue">
+              SANDHILLS GLOBAL
+            </h2>
+            <h2 className="text-xl">May 2022 - May 2025</h2>
           </div>
-          <h2 className="text-2xl font-bold">Sandhills Global</h2>
           <p>
             Starting in May 2022, I have been interning at Sandhills Global in
             Lincoln, NE. During my training, I gained experience working in an
@@ -60,6 +63,12 @@ function Experience() {
             </a>
             .
           </p>
+          <div className="flex justify-center">
+            <img
+              className="rounded-lg object-contain m-2 h-auto w-full"
+              src={sandhills}
+            />
+          </div>
         </div>
       </div>
     </div>

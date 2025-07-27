@@ -16,11 +16,11 @@ function Layout(props) {
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
 
   const menuItems = [
-    { name: "about", displayName: "About", offset: -100 },
-    { name: "skills", displayName: "Skills", offset: -75 },
-    { name: "education", displayName: "Education", offset: -100 },
-    { name: "experience", displayName: "Experience", offset: -75 },
-    { name: "projects", displayName: "Projects", offset: -50 },
+    { name: "about", displayName: "ABOUT", offset: -100 },
+    { name: "skills", displayName: "SKILLS", offset: -75 },
+    { name: "education", displayName: "EDUCATION", offset: -100 },
+    { name: "experience", displayName: "EXPERIENCE", offset: -75 },
+    { name: "projects", displayName: "PROJECTS", offset: -50 },
   ];
 
   return (

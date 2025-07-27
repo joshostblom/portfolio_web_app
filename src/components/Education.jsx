@@ -5,10 +5,8 @@ import rhsLogo from "/images/rhs-logo.png";
 
 function Education() {
   return (
-    <div className="flex flex-col gap-10 py-10">
-      <h1 className="text-3xl md:text-5xl font-bold w-full text-center">
-        Education
-      </h1>
+    <div className="flex flex-col gap-5 py-5">
+      <h1 className="title">EDUCATION</h1>
       <div className="flex flex-col md:flex-row justify-evenly gap-2">
         <EducationCard
           logos={[unlLogo]}

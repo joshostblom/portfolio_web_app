@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 function Skills(props) {
   return (
     <div className="flex gap-5 flex-col justify-center items-center py-5 w-full">
-      <h1 className="text-3xl md:text-5xl text-center font-bold">Skills</h1>
+      <h1 className="title">SKILLS</h1>
       <ul className="flex flex-col gap-3 w-full">
         {props.tiers.map((tier, index) => (
           <li

@@ -4,6 +4,10 @@ export default {
   darkMode: "selector",
   theme: {
     extend: {
+      colors: {
+        lyftpink: "#FF00BF",
+        sandhillsblue: "#5590adff",
+      },
       keyframes: {
         glimmer: {
           "0%": { backgroundPosition: "200% center" },
