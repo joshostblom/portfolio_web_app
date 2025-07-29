@@ -11,16 +11,22 @@ function Experience() {
         <ExperienceCard
           title='LYFT'
           titlecolor={'lyftpink'}
-          description='Throughout the summer of 2025 I had the privelege of working at Lyft
-            as an Android intern in San Francisco. My project involved creating
-            a space for incentives on the home screen. These incentives informed
-            the user about deals and perks they currenlty have when requesting a
-            ride with the goal of increasing user interest. The project involved
-            two UI variants, both implemented with Jetpack Compose. Utilizing
-            MVI architecture, any interaction with the UI triggered an intent
-            which then reduces the state within the ViewModel to update the
-            view. Both variants were also setup with impression tracking to
-            analyze user preference through experimentation.'
+          description={
+            <div>
+              <p>
+                Throughout the summer of 2025 I had the privelege of working at Lyft
+                as an Android intern in San Francisco. My project involved creating
+                a space for incentives on the home screen. These incentives informed
+                the user about deals and perks they currenlty have when requesting a
+                ride with the goal of increasing user interest. The project involved
+                two UI variants, both implemented with Jetpack Compose. Utilizing
+                MVI architecture, any interaction with the UI triggered an intent
+                which then reduces the state within the ViewModel to update the
+                view. Both variants were also setup with impression tracking to
+                analyze user preference through experimentation.
+              </p>
+            </div>
+          }
           dates='May 2025 - August 2025'
           images={[lyftfriends]}
         />
@@ -29,7 +35,7 @@ function Experience() {
           title='SANDHILLS GLOBAL'
           titlecolor={'sandhillsblue'}
           description={
-            <>
+            <p>
               Starting in May 2022, I have been interning at Sandhills Global in
               Lincoln, NE. During my training, I gained experience working in an
               Agile environment, with MVC architecture patterns, and using source
@@ -60,7 +66,7 @@ function Experience() {
                 Machinery Trader from the Google Play store
               </a>
               .
-            </>
+            </p>
           }
           dates='May 2022 - May 2025'
           images={[sandhills]}

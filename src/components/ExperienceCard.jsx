@@ -5,9 +5,7 @@ function ExperienceCard(props) {
                 <h2 className={`text-4xl font-bold text-${props.titlecolor}`}>{props.title}</h2>
                 <h2 className="text-xl">{props.dates}</h2>
             </div>
-            <p>
-                {props.description}
-            </p>
+            {props.description}
             <div className="flex justify-center">
                 {props.images.map((source) => (
                     <img
