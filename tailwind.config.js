@@ -4,6 +4,10 @@ export default {
   darkMode: "selector",
   theme: {
     extend: {
+      fontFamily: {
+        rubik: ['Rubik', 'sans-serif'],
+        quicksand: ['Quicksand', 'sans-serif'],
+      },
       colors: {
         lyftpink: "#FF00BF",
         sandhillsblue: "#5590adff",
