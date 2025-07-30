@@ -4,11 +4,11 @@ function Skills(props) {
   return (
     <div className="flex gap-5 flex-col justify-center items-center py-5 w-full">
       <h1 className="title">SKILLS</h1>
-      <ul className="flex flex-col gap-3 w-full">
+      <ul className="flex flex-col gap-4 w-full">
         {props.tiers.map((tier, index) => (
           <li
             key={index}
-            className="flex flex-col flex-grow bg-slate-100 dark:bg-slate-800 rounded-xl p-5"
+            className="flex flex-col flex-grow bg-slate-100 dark:bg-slate-800 rounded-xl px-5 py-3"
           >
             <div className="flex flex-col gap-2 md:gap-4">
               <h3 className="font-bold text-lg lg:text-xl">{tier.name}</h3>

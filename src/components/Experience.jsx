@@ -6,7 +6,7 @@ function Experience() {
   return (
     <div className="flex flex-col gap-5 py-5">
       <h1 className="title">EXPERIENCE</h1>
-      <div className="flex flex-col lg:flex-col gap-5">
+      <div className="flex flex-col lg:flex-col gap-4">
         <ExperienceCard
           title="LYFT"
           titlecolor={"text-lyftpink"}

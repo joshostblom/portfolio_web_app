@@ -6,7 +6,7 @@ function ExperienceCard(props) {
     const [showMore, setShowMore] = useState(false);
 
     return (
-        <div className="flex flex-col gap-2 shadow-sm bg-slate-100 dark:bg-slate-800 p-5 rounded-lg">
+        <div className="flex flex-col gap-2 shadow-sm bg-slate-100 dark:bg-slate-800 px-5 py-3 rounded-lg">
             <div className="flex flex-row items-center justify-between">
                 <div className="flex flex-col md:flex-row gap-2 md:items-center">
                     <h2 className={`text-5xl font-bold ${props.titlecolor}`}>

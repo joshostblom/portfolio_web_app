@@ -41,7 +41,7 @@ function TitleCard() {
           src={me}
           className="h-auto rounded-full shadow-md w-44 md:w-60 lg:w-96"
         />
-        <div className="p-5 rounded-lg shadow-md bg-slate-100 dark:bg-slate-800 text-4xl font-bold md:text-4xl lg:text-5xl">
+        <div className="px-5 py-3 rounded-lg shadow-md bg-slate-100 dark:bg-slate-800 text-4xl font-bold md:text-4xl lg:text-5xl">
           {visibleText.split("").map((char, i) => {
             const isNameChar = i >= 8 && i < 20; // "Josh Ostblom"
             const confettiColor =
