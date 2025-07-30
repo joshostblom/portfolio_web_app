@@ -12,10 +12,8 @@ function EducationCard(props) {
           {props.locations.map((location) => (
             <h3>{location}</h3>
           ))}
-          <h4 className="text-gray-500 dark:text-gray-400 italic">
-            {props.dates}
-          </h4>
-          <div className="mt-2">{props.children}</div>
+          <h4 className="text-gray-500 dark:text-gray-400">{props.dates}</h4>
+          <div className="mt-5">{props.children}</div>
         </div>
       </div>
     </div>
