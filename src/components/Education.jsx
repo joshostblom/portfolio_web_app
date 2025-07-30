@@ -7,7 +7,7 @@ function Education() {
   return (
     <div className="flex flex-col gap-5 py-5">
       <h1 className="title">EDUCATION</h1>
-      <div className="flex flex-col md:flex-row justify-evenly gap-2">
+      <div className="flex flex-col justify-evenly gap-2">
         <EducationCard
           logos={[unlLogo]}
           title="M.S. Computer Science"
