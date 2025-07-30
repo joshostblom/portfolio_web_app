@@ -17,21 +17,26 @@ function Experience() {
             "Ensured code reliability and maintainability by achieving complete unit test coverage and implementing snapshot testing for all UI components.",
           ]}
           description={
-            <div>
-              <p>
-                Throughout the summer of 2025 I had the privelege of working at
-                Lyft as an Android intern in San Francisco. My project involved
-                creating a space for incentives on the home screen. These
-                incentives informed the user about deals and perks they
-                currenlty have when requesting a ride with the goal of
-                increasing user interest. The project involved two UI variants,
-                both implemented with Jetpack Compose. Utilizing MVI
-                architecture, any interaction with the UI triggered an intent
-                which then reduces the state within the ViewModel to update the
-                view. Both variants were also setup with impression tracking to
-                analyze user preference through experimentation.
-              </p>
-            </div>
+            <p>
+              Throughout the summer of 2025 I had the privelege of working at
+              Lyft as an Android intern in San Francisco. My project involved
+              creating a space for incentives on the home screen. These
+              incentives informed the user about deals and perks they currenlty
+              have when requesting a ride with the goal of increasing user
+              interest. The project involved two UI variants, both implemented
+              with Jetpack Compose. Utilizing MVI architecture, any interaction
+              with the UI triggered an intent which then reduces the state
+              within the ViewModel to update the view. Both variants were also
+              setup with impression tracking to analyze user preference through
+              experimentation. To ensure code reliability, all lines of code
+              were covered by unit tests and all UI components with snapshot
+              tests. In addition to my main project, I used my extra time to
+              improve the map experience on the home screen. Here I implemented
+              a feature that automatically adjusts the map zoom level based on
+              the distance between the user and nearby drivers. This was done
+              using Kotlin coroutines to track the user and driver locations in
+              real time.
+            </p>
           }
           dates="May 2025 - August 2025"
           images={[lyftfriends]}
