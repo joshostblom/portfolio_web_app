@@ -7,7 +7,7 @@ function LocalNavbar(props) {
     <div className="flex shadow-md bg-slate-100 dark:bg-slate-800 p-3 rounded-lg items-center px-5 select-none lg:text-xl">
       <nav className="flex w-full">
         {/* Hamburger menu for smaller screens */}
-        <div className="hidden max-sm:flex items-center">
+        <div className="hidden max-lg:flex items-center">
           <FiMenu
             className="text-2xl cursor-pointer"
             onClick={() => {
@@ -16,7 +16,7 @@ function LocalNavbar(props) {
           />
         </div>
         {/* Items listed accross for larger screens */}
-        <ul className="max-sm:hidden flex items-center font-bold ml-2 gap-4 ">
+        <ul className="max-lg:hidden flex items-center font-bold ml-2 gap-4 ">
           {props.links.map((link, index) => (
             <li key={index}>
               <Link

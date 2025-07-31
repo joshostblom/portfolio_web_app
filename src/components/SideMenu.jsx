@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 
 function SideMenu(props) {
   return (
-    <div className="hidden max-sm:flex fixed h-full w-full">
+    <div className="hidden max-lg:flex fixed h-full w-full">
       <aside className="w-60 bg-white dark:bg-slate-800 drop-shadow-2xl">
         <div className="flex flex-row p-5 w-full justify-center">
           <div className="flex flex-col gap-5 w-full items-center">
