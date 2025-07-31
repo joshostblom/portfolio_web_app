@@ -15,7 +15,7 @@ function ExperienceCard(props) {
           <div>
             <h2 className="text-xl">{props.position}</h2>
             <div className="text-md text-gray-500 dark:text-gray-400">
-              {props.dates}
+              ;{props.dates}
             </div>
           </div>
         </div>

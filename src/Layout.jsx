@@ -11,6 +11,7 @@ import { useState } from "react";
 import SideMenu from "./components/SideMenu";
 import Education from "./components/Education";
 import TitleCard from "./components/TitleCard";
+import Hobbies from "./components/Hobbies";
 
 function Layout(props) {
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
@@ -21,6 +22,7 @@ function Layout(props) {
     { name: "education", displayName: "EDUCATION", offset: -100 },
     { name: "experience", displayName: "EXPERIENCE", offset: -75 },
     { name: "projects", displayName: "PROJECTS", offset: -50 },
+    { name: "hobbies", displayName: "HOBBIES", offset: -100 },
   ];
 
   return (
@@ -71,6 +73,9 @@ function Layout(props) {
           </Element>
           <Element name="projects">
             <Projects />
+          </Element>
+          <Element name="hobbies">
+            <Hobbies />
           </Element>
         </div>
       </div>
