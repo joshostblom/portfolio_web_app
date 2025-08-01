@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 
 function LocalNavbar(props) {
   return (
-    <div className="flex shadow-md bg-slate-100 dark:bg-slate-800 p-3 rounded-lg items-center px-5 select-none lg:text-xl">
+    <div className="flex shadow-lg bg-slate-100 dark:bg-slate-800 p-3 rounded-lg items-center px-5 select-none lg:text-xl">
       <nav className="flex w-full">
         {/* Hamburger menu for smaller screens */}
         <div className="hidden max-lg:flex items-center">
@@ -47,7 +47,7 @@ function LocalNavbar(props) {
               key={index}
               className="hover:text-gray-500 transition-colors duration-200"
             >
-              <a href={social.link} target="_blank">
+              <a href={social.link}>
                 <social.icon className="text-2xl lg:text-3xl" />
               </a>
             </li>

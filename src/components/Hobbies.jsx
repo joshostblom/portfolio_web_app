@@ -1,6 +1,6 @@
 function Hobbies() {
   return (
-    <div className="flex flex-col gap-10 pb-5 w-full">
+    <div className="flex flex-col gap-5 py-5">
       <h1 className="title">HOBBIES</h1>
       <div className="flex flex-col gap-2 shadow-sm bg-slate-100 dark:bg-slate-800 px-5 py-3 rounded-lg">
         <h2 className="text-2xl font-bold">Hobbies</h2>

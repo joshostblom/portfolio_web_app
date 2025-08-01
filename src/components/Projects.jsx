@@ -32,10 +32,10 @@ function Projects() {
   }
 
   return (
-    <div className="flex flex-col pt-10">
+    <div className="flex flex-col gap-5 py-5">
       <h1 className="title">PROJECTS</h1>
 
-      <ul>
+      <ul className="flex flex-col gap-4">
         {projects &&
           projects.map((project) => (
             <li
@@ -43,7 +43,7 @@ function Projects() {
               className="cursor-pointer"
               onClick={() => window.open(project.link, "_blank")}
             >
-              <div className="flex bg-slate-100 dark:bg-slate-800 rounded-xl p-5 my-5">
+              <div className="flex shadow-sm bg-slate-100 dark:bg-slate-800 px-5 py-3 rounded-lg">
                 <div className="flex flex-col gap-2 justify-start flex-grow">
                   <span className="text-left font-bold text-3xl lg:text-4xl">
                     {project.title}
