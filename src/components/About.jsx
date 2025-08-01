@@ -1,11 +1,27 @@
 import socialData from "../data/socialData";
+import { useEffect, useState } from "react";
 
 function About() {
+  const [greeting, setGreeting] = useState("");
+
+  useEffect(() => {
+    const hour = new Date().getHours();
+    let message = "Hello!";
+    if (hour < 12) {
+      message = "Good Morning!";
+    } else if (hour < 18) {
+      message = "Good Afternoon!";
+    } else {
+      message = "Good Evening!";
+    }
+    setGreeting(message);
+  }, []);
+
   return (
     <div className="flex flex-col gap-5 pb-5 w-full">
       <h1 className="title">ABOUT ME</h1>
       <div className="flex flex-col gap-2 shadow-sm bg-slate-100 dark:bg-slate-800 px-5 py-3 rounded-lg">
-        <h2 className="text-2xl font-bold">Good Morning!</h2>
+        <h2 className="text-2xl font-bold">{greeting}</h2>
         <p>
           Hi, I'm Joshua Ostblom — a software engineer with a passion for
           building efficient, user-focused applications that solve real-world
@@ -58,6 +74,21 @@ function About() {
         </div>
       </div>
     </div>
+  );
+}
+
+function AboutLink(props) {
+  return (
+    <a
+      className="shadow-sm bg-white dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 px-3 py-1 rounded-full"
+      href={props.href}
+      target="_blank"
+    >
+      <div className="flex flex-row gap-2 items-center">
+        {props.title}
+        {props.icon}
+      </div>
+    </a>
   );
 }
 
