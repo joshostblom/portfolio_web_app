@@ -92,19 +92,4 @@ function AboutLink(props) {
   );
 }
 
-function AboutLink(props) {
-  return (
-    <a
-      className="shadow-sm bg-white dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 px-3 py-1 rounded-full"
-      href={props.href}
-      target="_blank"
-    >
-      <div className="flex flex-row gap-2 items-center">
-        {props.title}
-        {props.icon}
-      </div>
-    </a>
-  );
-}
-
 export default About;
