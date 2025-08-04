@@ -47,7 +47,7 @@ function LocalNavbar(props) {
               key={index}
               className="hover:text-gray-500 transition-colors duration-200"
             >
-              <a href={social.link}>
+              <a href={social.link} target="_blank">
                 <social.icon className="text-2xl lg:text-3xl" />
               </a>
             </li>
