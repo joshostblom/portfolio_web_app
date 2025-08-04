@@ -8,12 +8,12 @@ function ExperienceCard(props) {
   return (
     <div className="flex flex-col gap-2 shadow-sm bg-slate-100 dark:bg-slate-800 px-5 py-3 rounded-lg">
       <div className="flex flex-row items-center justify-between">
-        <div className="flex flex-col md:flex-row gap-2 md:items-center">
-          <h2 className={`text-5xl font-bold ${props.titlecolor}`}>
+        <div className="flex flex-col md:flex-row md:gap-2 md:items-center">
+          <h2 className={`text-4xl md:text-5xl font-bold ${props.titlecolor}`}>
             {props.title}
           </h2>
           <div>
-            <h2 className="text-xl">{props.position}</h2>
+            <h2 className="md:text-xl">{props.position}</h2>
             <div className="text-md text-gray-500 dark:text-gray-400">
               {props.dates}
             </div>

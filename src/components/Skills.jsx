@@ -12,7 +12,7 @@ function Skills(props) {
           >
             <div className="flex flex-col gap-2 md:gap-4">
               <h3 className="font-bold text-lg lg:text-xl">{tier.name}</h3>
-              <ul className={`flex flex-wrap gap-0.5 md:gap-4`}>
+              <ul className={`flex flex-wrap md:gap-4`}>
                 {tier.skills.map((skill, index) => (
                   <li
                     key={index}

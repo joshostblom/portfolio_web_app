@@ -66,7 +66,7 @@ function Hobbies() {
             alt="Marching Band"
           />
           <iframe
-            className="rounded-lg w-full sm:w-[48%] md:w-[60%] lg:w-[64%] object-cover"
+            className="rounded-lg w-full min-h-[300px] sm:w-[48%] md:w-[60%] lg:w-[64%] object-cover"
             src="https://www.youtube.com/embed/zWLZ-wwnjgA?si=bfhQrIJlBUSIVbEx"
             title="YouTube video player"
             frameborder="0"
