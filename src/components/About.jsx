@@ -23,9 +23,9 @@ function About() {
       <div className="flex flex-col gap-2 shadow-sm bg-slate-100 dark:bg-slate-800 px-5 py-3 rounded-lg">
         <h2 className="text-2xl font-bold">{greeting}</h2>
         <p>
-          Hi, I'm Joshua Ostblom — a software engineer with a passion for
-          building efficient, user-focused applications that solve real-world
-          problems. I'm currently pursuing a Master's in Computer Science at the
+          I'm Joshua Ostblom, a software engineer with a passion for building
+          efficient, user-focused applications that solve real-world problems.
+          I'm currently pursuing a Master's in Computer Science at the
           University of Nebraska-Lincoln, where I also completed my Bachelor's
           degree with a minor in Mathematics. I've been fortunate to make the
           Dean's List every semester and am a proud recipient of the Susan
