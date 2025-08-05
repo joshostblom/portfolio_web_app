@@ -25,11 +25,12 @@ function About() {
         <p>
           I'm Joshua Ostblom, a software engineer with a passion for building
           efficient, user-focused applications that solve real-world problems.
-          I'm currently pursuing a Master's in Computer Science at the
-          University of Nebraska-Lincoln, where I also completed my Bachelor's
-          degree with a minor in Mathematics. I've been fortunate to make the
-          Dean's List every semester and am a proud recipient of the Susan
-          Buffett Scholarship and a Platinum Award for my capstone project.
+          I'm currently pursuing a Master's of Science in Computer Science at
+          the University of Nebraska-Lincoln, where I also completed my
+          Bachelor's of Science with a minor in Mathematics. I've been fortunate
+          to make the Dean's List every semester and am a proud recipient of the
+          Susan Buffett Scholarship and a Platinum Award for my capstone
+          project.
         </p>
         <p>
           Professionally, I've gained over three years of hands-on industry
@@ -46,7 +47,7 @@ function About() {
         </p>
         <p>
           On the side, I've built full-stack web applications using React.js,
-          Express.js, and MySQL—including the very site you're on now. I've
+          Express.js, and MySQL including the very site you're on now. I've
           implemented secure REST APIs with JWT-based authentication and
           designed interactive front ends with Tailwind CSS, ensuring responsive
           and visually engaging user experiences. I'm constantly driven by

@@ -55,8 +55,8 @@ function Hobbies() {
           high school, I participated in marching, concert, jazz, and show choir
           band. In my senior year I was a drum major for our Phantom of the
           Opera show, and I was also part of a quartet that performed the
-          national anthem at a Storm Chasers baseball game. Recently I've been
-          getting back into music by participating in the Lincoln Community
+          national anthem at a Omaha Storm Chasers baseball game. Recently I've
+          been getting back into music by participating in the Lincoln Community
           Concert Band.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">

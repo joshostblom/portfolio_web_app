@@ -58,7 +58,7 @@ function Education() {
 
         <EducationCard
           logos={[rhsLogo]}
-          title="Highschool Diploma"
+          title="High School Diploma"
           locations={["Ralston High School"]}
           dates="August 2016-May 2020"
         >
@@ -69,7 +69,7 @@ function Education() {
             <li>
               <strong>Activities: </strong>
               Robotics, Band, Marching Band, Jazz Band, Show Choir Band, DECA,
-              National Honors Society, Tennis, Golf, Track,
+              National Honors Society, Tennis, Golf, Track
             </li>
             <li>
               <strong>Achievements: </strong>
