@@ -4,10 +4,10 @@ import { Link } from "react-scroll";
 
 function LocalNavbar(props) {
   return (
-    <div className="flex shadow-lg bg-slate-100 dark:bg-slate-800 p-3 rounded-lg items-center px-5 select-none lg:text-xl">
+    <div className="flex shadow-lg bg-slate-100 dark:bg-slate-800 p-3 rounded-lg items-center px-3 md:px-5 select-none lg:text-xl">
       <nav className="flex w-full">
         {/* Hamburger menu for smaller screens */}
-        <div className="hidden max-lg:flex items-center">
+        <div className="hidden max-xl:flex items-center">
           <FiMenu
             className="text-2xl cursor-pointer"
             onClick={() => {
@@ -16,7 +16,7 @@ function LocalNavbar(props) {
           />
         </div>
         {/* Items listed accross for larger screens */}
-        <ul className="max-lg:hidden flex items-center font-bold ml-2 gap-4 ">
+        <ul className="max-xl:hidden flex items-center font-bold ml-2 gap-4 ">
           {props.links.map((link, index) => (
             <li key={index}>
               <Link
@@ -32,12 +32,12 @@ function LocalNavbar(props) {
             </li>
           ))}
         </ul>
-        <ul className="flex items-center ml-auto gap-4">
+        <ul className="flex items-center ml-auto gap-2 md:gap-4">
           {/* Resume button */}
           <a
             href="api/resources/get/resume"
             target="_blank"
-            className="inline-block px-5 py-1 text-white font-bold rounded-full bg-gradient-to-r from-pink-400 via-blue-400 to-pink-400 bg-[length:400%_100%] bg-[position:0%_center] hover:animate-glimmer"
+            className="inline-block px-3 py-0.5 md:px-5 md:py-1 text-white font-bold rounded-full bg-gradient-to-r from-pink-400 via-blue-400 to-pink-400 bg-[length:400%_100%] bg-[position:0%_center] hover:animate-glimmer"
           >
             Resume
           </a>
@@ -48,7 +48,7 @@ function LocalNavbar(props) {
               className="hover:text-gray-500 transition-colors duration-200"
             >
               <a href={social.link} target="_blank">
-                <social.icon className="text-2xl lg:text-3xl" />
+                <social.icon className="text-xl md:text-2xl lg:text-3xl" />
               </a>
             </li>
           ))}

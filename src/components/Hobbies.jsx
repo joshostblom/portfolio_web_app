@@ -69,10 +69,7 @@ function Hobbies() {
             className="rounded-lg w-full min-h-[300px] sm:w-[48%] md:w-[60%] lg:w-[64%] object-cover"
             src="https://www.youtube.com/embed/zWLZ-wwnjgA?si=bfhQrIJlBUSIVbEx"
             title="YouTube video player"
-            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
           />
         </div>
       </div>
