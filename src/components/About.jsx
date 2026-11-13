@@ -23,27 +23,24 @@ function About() {
       <div className="flex flex-col gap-2 shadow-sm bg-slate-100 dark:bg-slate-800 px-5 py-3 rounded-lg">
         <h2 className="text-2xl font-bold">{greeting}</h2>
         <p>
-          I'm Joshua Ostblom, a software engineer with a passion for building
-          efficient, user-focused applications that solve real-world problems.
-          I'm currently pursuing a Master's of Science in Computer Science at
-          the University of Nebraska-Lincoln, where I also completed my
-          Bachelor's of Science with a minor in Mathematics. I've been fortunate
-          to make the Dean's List every semester and am a proud recipient of the
-          Susan Buffett Scholarship and a Platinum Award for my capstone
-          project.
+          I'm a Software Engineer specializing in Kotlin, Android, and payment
+          technology, with experience building production software across mobile
+          applications, backend systems, and in-person payment terminals.
         </p>
         <p>
-          Professionally, I've gained over three years of hands-on industry
-          experience as a Software Engineering Intern at Sandhills Global, and
-          most recently as an Android Engineer Intern at Lyft. At Sandhills, I
-          led the development of over 25 mobile applications using Jetpack
-          Compose and .NET, each surpassing 100,000 downloads on the Google Play
-          Store. I also designed a modular OAuth microservice, enhanced
-          cross-platform apps using Xamarin and GraphQL, and developed a domain
-          search engine now used by over 1,200 internal employees. At Lyft, I
-          worked on dynamic UI for rider incentives, implemented real-time map
-          updates, and contributed robust test coverage for production-ready
-          Android features using Kotlin and MVI architecture.
+          I currently work as a Kotlin Engineer at Adyen, where I develop and
+          integrate EMV L2 contact and contactless payment functionality for
+          payment terminals. My work spans Kotlin/C++, automated EMV testing,
+          terminal observability, and production debugging. I've also worked on
+          resolving concurrency issues in payment terminal state machines and
+          building tooling to validate complex payment flows.
+        </p>
+        <p>
+          Previously, I worked as an Android Engineer at Lyft, building
+          rider-facing experiences with Kotlin, Jetpack Compose, MVI, and
+          coroutines. At Sandhills Global, I developed and maintained Android
+          applications, backend APIs, microservices, and internal developer
+          tools, including mobile applications with 100,000+ downloads.
         </p>
         <p>
           On the side, I've built full-stack web applications using React.js,

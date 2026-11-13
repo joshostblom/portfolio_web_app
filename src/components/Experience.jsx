@@ -8,6 +8,20 @@ function Experience() {
       <h1 className="title">EXPERIENCE</h1>
       <div className="flex flex-col lg:flex-col gap-4">
         <ExperienceCard
+          title="ADYEN"
+          titlecolor={"text-adyengreen"}
+          position={"Kotlin Engineer, Core Experience"}
+          bullets={[
+            "Integrated EMV L2 contact and contactless payment kernel features using Kotlin/C++, validating implementations against EMV specifications and supporting a phased rollout across Adyen's in-person payment fleet.",
+            "Root-caused and resolved a production race condition causing payment terminals to hang mid-transaction for a merchant processing 500M+ transactions annually by eliminating stale asynchronous updates that corrupted shared state-machine state.",
+            "Built and extended an automated EMV terminal test client with CI automation, TLV decoding, configurable test delays, receipt validation, multi-transaction test runs, and issuer ARC response handling, automating 200+ test scenarios.",
+            "Instrumented terminal transaction events and designed performance dashboards to compare transaction speed across Adyen's fleet, enabling analysis of 30M+ daily transactions and identifying performance differences across releases.",
+            "Leveraged agentic coding with Factory Droid and MCP integrations to accelerate implementation and debugging, personally reviewing and test-validating generated code while maintaining production-quality reliability.",
+          ]}
+          dates="January 2026 - Present"
+        />
+
+        <ExperienceCard
           title="LYFT"
           titlecolor={"text-lyftpink"}
           position={"Android Engineer, Intern"}

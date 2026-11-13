@@ -44,6 +44,11 @@ const skillTiers = [
         icon: PiFileCSharp,
       },
       {
+        name: "C++",
+        color: "#00599C",
+        icon: SiCplusplus,
+      },
+      {
         name: "JavaScript",
         color: "#F7DF1E",
         icon: SiJavascript,
@@ -57,11 +62,6 @@ const skillTiers = [
         name: "Java",
         color: "#EA2D2E",
         icon: FaJava,
-      },
-      {
-        name: "C++",
-        color: "#00599C",
-        icon: SiCplusplus,
       },
       {
         name: "SQL",

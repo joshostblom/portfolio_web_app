@@ -5,10 +5,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        rubik: ['Rubik', 'sans-serif'],
-        quicksand: ['Quicksand', 'sans-serif'],
+        rubik: ["Rubik", "sans-serif"],
+        quicksand: ["Quicksand", "sans-serif"],
       },
       colors: {
+        adyengreen: "#0abf53",
         lyftpink: "#FF00BF",
         sandhillsblue: "#5590adff",
       },

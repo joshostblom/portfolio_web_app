@@ -4,6 +4,8 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 function ExperienceCard(props) {
   const [showMore, setShowMore] = useState(false);
+  const detailsProvided =
+    props.description !== undefined && props.images !== undefined;
 
   return (
     <div className="flex flex-col gap-2 shadow-sm bg-slate-100 dark:bg-slate-800 px-5 py-3 rounded-lg">
@@ -37,16 +39,18 @@ function ExperienceCard(props) {
           </ul>
         </div>
 
-        <button
-          onClick={() => setShowMore((prev) => !prev)}
-          className="w-full pt-2 cursor-pointer hover:text-gray-500 transition-colors duration-200 font-semibold"
-        >
-          <div className="flex-1 h-px bg-slate-300 dark:bg-slate-700" />
-          <div className="w-full pt-2 flex flex-row gap-2 items-center justify-center">
-            {showMore ? "SHOW LESS" : "SHOW MORE"}
-            {showMore ? <IoIosArrowUp /> : <IoIosArrowDown />}
-          </div>
-        </button>
+        {detailsProvided && (
+          <button
+            onClick={() => setShowMore((prev) => !prev)}
+            className="w-full pt-2 cursor-pointer hover:text-gray-500 transition-colors duration-200 font-semibold"
+          >
+            <div className="flex-1 h-px bg-slate-300 dark:bg-slate-700" />
+            <div className="w-full pt-2 flex flex-row gap-2 items-center justify-center">
+              {showMore ? "SHOW LESS" : "SHOW MORE"}
+              {showMore ? <IoIosArrowUp /> : <IoIosArrowDown />}
+            </div>
+          </button>
+        )}
 
         <AnimatePresence initial={false} mode="wait">
           {showMore && (
